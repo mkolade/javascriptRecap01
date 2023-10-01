@@ -39,3 +39,9 @@ console.log(kid); */
 console.log(1/0);//output is Infinity
 //Number constant usage
 Number.MAX_SAFE_INTEGER */
+
+/* //consoleLog CSS
+console.log('%cHello %cWorld!','font-size:30px;color:red','color:blue'); */
+
+/* //using typeof
+console.log(typeof null); */
