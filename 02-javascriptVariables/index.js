@@ -45,3 +45,30 @@ console.log('%cHello %cWorld!','font-size:30px;color:red','color:blue'); */
 
 /* //using typeof
 console.log(typeof null); */
+
+//STRINGS
+
+/* //stringCreation
+var falseString = String(false)
+var intString = String(34)
+var intString2 = (33).toString()
+console.log(falseString,intString,intString2) */
+
+/* //stringConcatenation
+var foo = "Foo";
+var bar = "Bar";
+console.log(foo + ' ' + bar)// output Foo Bar;
+console.log(foo + bar)// output FooBar;
+console.log(foo.concat(" ",bar))// output Foo Bar ;
+console.log(foo + " " + 32 + " " + bar)// output Foo 32 Bar; 32 is converted into a str*/
+
+//stringReversal
+function stringReversal(str){
+    return (
+        str.split('').reverse(str).join('')
+        /* //can also be done using spread operator like below
+        [...String(str)].reverse().join('') */
+    )
+}
+var reversedString = stringReversal('string')
+console.log(reversedString);//output gnirts
