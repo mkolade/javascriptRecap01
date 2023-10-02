@@ -102,10 +102,61 @@ console.log(stringArray[0],stringArray[1])//output " Hello World! "
 var joinedArray = stringArray.join("-")
 console.log(joinedArray);//output " Hello-World! " */
 
-//using substring
+/* //using substring and slice
 var useSubString = "Any string"
-console.log(useSubString.substring(0,3))//output Any
+console.log(useSubString.substring(4,7))//output str
+console.log(useSubString.slice(4,7))//output str
+console.log(useSubString.slice(4))//output string
 //detecting a string - use typeof
 if(typeof useSubString === 'string'){
     console.log(useSubString + ' itself Indeed has it\'s own subString '.trimEnd())//output "Any string itself Indeed has it's own subString"
 }
+//using character code
+var abcd = "ABCDEF";
+var charCode = abcd.charCodeAt(4)
+console.log(charCode)//output The character code for index 4(E) = 69. WHatever i'll ever need if for hahaha
+ */
+
+/* //string number conversion
+var int1 = 102342;//base 10
+var base16 = int1.toString(16);
+console.log(int1 + " in Hexadecimal is " + base16);//output 102342 in Hexadecimal is 18fc6
+var backToInt = parseInt(base16,16);
+console.log(base16 + " back to Decimal is " + backToInt);//output 18fc6 back to Decimal is 102342 */
+
+/* //using string indexOf, replace & includes
+var simpleString = "Hello, World!";
+console.log(simpleString.indexOf('l'))//output 2
+console.log(simpleString.indexOf('Wor'))//output 7
+console.log(simpleString.lastIndexOf('l'))//output 10
+
+if(simpleString.includes("Hello")){
+    var newSimpleString = simpleString.replace("Hello","New");
+    console.log(newSimpleString);//"New, World!"
+}
+//(to upper and lower case) & repeat
+var lowerCase = newSimpleString.toLowerCase();
+var upperCase = newSimpleString.toUpperCase();
+var latestString = "Hello"
+console.log(lowerCase, upperCase);//"new, world! NEW, WORLD!"
+console.log(latestString.repeat(3))//HelloHelloHello
+ */
+
+//Date
+var newDate = new Date(2023,11);
+console.log(newDate.toString());//Fri Dec 01 2023 00:00:00 GMT+0100 (West Africa Standard Time)
+//time string
+console.log(newDate.toTimeString());//00:00:00 GMT+0100 (West Africa Standard Time)
+console.log(newDate.toDateString());//My favorite - Fri Dec 01 2023
+console.log(newDate.toLocaleDateString());//2nd favorite - Fri Dec 01 2023
+console.log(newDate.toUTCString());//Thu, 30 Nov 2023 23:00:00 GMT
+console.log(newDate.getFullYear());//2023
+console.log(newDate.getMonth());//11
+var latestDate = new Date();
+console.log(latestDate.getHours());//output varies. mine was -18
+console.log(latestDate.getMinutes());//output varies. mine was -41
+
+
+
+
+
