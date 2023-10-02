@@ -63,12 +63,24 @@ console.log(foo.concat(" ",bar))// output Foo Bar ;
 console.log(foo + " " + 32 + " " + bar)// output Foo 32 Bar; 32 is converted into a str*/
 
 //stringReversal
+/* //method01
 function stringReversal(str){
     return (
         str.split('').reverse(str).join('')
-        /* //can also be done using spread operator like below
-        [...String(str)].reverse().join('') */
+        //can also be done using spread operator like below
+        //[...String(str)].reverse().join('') 
     )
 }
 var reversedString = stringReversal('string')
-console.log(reversedString);//output gnirts
+console.log(reversedString);//output gnirts */
+//method02
+function stringReversal02(str){
+    var revStr = "";
+    var i;
+    for (i = (str.length - 1); i >= 0; i--){
+        revStr += str[i]
+    }
+    return revStr;
+}
+var reversedString02 = stringReversal02('string')
+console.log(reversedString02);//output gnirts
