@@ -77,10 +77,11 @@ console.log(reversedString);//output gnirts */
 function stringReversal02(str){
     var revStr = "";
     var i;
-    for (i = (str.length - 1); i >= 0; i--){
-        revStr += str[i]
+    for (i = (str.length -1); i >= 0; i--){
+        revStr += str[i];
     }
     return revStr;
 }
-var reversedString02 = stringReversal02('string')
-console.log(reversedString02);//output gnirts
+
+var reversedString02 = stringReversal02('racecar');
+console.log(reversedString02);//output racecar;
