@@ -153,10 +153,5 @@ console.log(newDate.toUTCString());//Thu, 30 Nov 2023 23:00:00 GMT
 console.log(newDate.getFullYear());//2023
 console.log(newDate.getMonth());//11
 var latestDate = new Date();
-console.log(latestDate.getHours());//output varies. mine was -18
-console.log(latestDate.getMinutes());//output varies. mine was -41
-
-
-
-
-
+console.log(latestDate.getHours());//output varies. mine was - 18
+console.log(latestDate.getMinutes());//output varies. mine was - 41
