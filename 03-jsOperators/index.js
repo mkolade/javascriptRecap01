@@ -64,7 +64,7 @@ var animal = 'kitty'
 return (animal === 'kitty') ?  'meow' :  'roar'; */
 
 //Switch statements
-function gay(){
+/* function gay(){
     return 'homo';
 }
 function fag(){
@@ -88,4 +88,13 @@ switch (value){
         break;
     default:
         console.log('I am celibate. Which also translates to Gayyy hahaha')
-}
+} */
+
+//Deep dive into if, else if, else
+const myValue = 67;
+if(myValue < 18)
+    console.log('You\'re Underage jorh. Gerrout')
+else if(myValue >= 18 && myValue <= 25)
+    console.log('You\'re Allowed in but Without any adult benefits')
+else
+    console.log('You\'re a perfect fit. Welcome in')
