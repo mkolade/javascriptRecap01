@@ -121,3 +121,8 @@ else if(myValue >= 18 && myValue <= 25)
 else
     console.log('You\'re a perfect fit. Welcome in') */
 
+// || and && short-circuiting
+/* var x = 10;
+x == 10 && console.log('x is 10')
+x != 10 || console.log('x is not 10')
+ */
