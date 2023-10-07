@@ -90,11 +90,34 @@ switch (value){
         console.log('I am celibate. Which also translates to Gayyy hahaha')
 } */
 
+/* //Strategy - alternative to switch case
+const animalSounds ={
+    dog () {
+        return 'Woof';
+    },
+    cat () {
+        return 'Meow';
+    },
+    cow () {
+        return 'moo';
+    },
+    default () {
+        return 'not recognized';
+    }
+};
+
+function findAnimalSound (animal){
+    const sound = animalSounds[animal] || animalSounds.default;
+    console.log(animal + ' goes ' + sound());
+}
+findAnimalSound('cow')// cow goes moo */
+
 //Deep dive into if, else if, else
-const myValue = 67;
+/* const myValue = 25;
 if(myValue < 18)
     console.log('You\'re Underage jorh. Gerrout')
 else if(myValue >= 18 && myValue <= 25)
-    console.log('You\'re Allowed in but Without any adult benefits')
+    console.log('You\'re Allowed in but Without any adult benefits')// This is displayed
 else
-    console.log('You\'re a perfect fit. Welcome in')
+    console.log('You\'re a perfect fit. Welcome in') */
+
