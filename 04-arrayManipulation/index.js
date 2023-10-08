@@ -64,3 +64,30 @@ const sortedArray = arrayToSort.sort((a,b) =>{
 console.log(sortedArray)//  [44, 4, 3, 2, 1, 'E', 'a', 'v'] */
 
 //looping in arrays
+
+//for loop
+/*Simple multiplication table */
+/* var i,j;
+for (i = 1; i <= 12; i++){
+    for(j = 1; j <= 12; j++){
+        console.log("%i multiplied by %i = %i",i,j,i*j)
+    }
+} */
+/* //looping through array
+const myArray = [23,2,3,4,5,8];
+for (var i = 0,length = myArray.length; i < length;i++){
+    console.log(myArray[i])//23 2 3 4 5 8 
+}
+//for(i in myArray) console.log(myArray[i]);//not recommended
+//looping in reverse below
+for(var i = myArray.length - 1;i > -1;i--){
+    var twoValue = myArray[i] * 2;
+    console.log(twoValue)//16 10 8 6 4 46
+} */
+
+//while loop
+var i = 0;
+while(i < 7 && i % 2 != 5){
+    console.log(i);//0 1 2 3 4 5 6
+    i++;
+};
