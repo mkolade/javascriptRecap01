@@ -139,14 +139,57 @@ function usingRest(a,b,c,...rest){
 usingRest(...array1); */
 
 //more on filter
-function checkForLetterA(str){
+/* function checkForLetterA(str){
     if(str && str[0].toLowerCase() == "a" ){
         return true;
     }
     return false;
 }
 
-var str = "Hello Fuck umar and his shitty attitude.";
+var str = "Hello. Fuck umar and his shitty attitude.";
 var splitStr = str.split(" ");
 var words = splitStr.filter(checkForLetterA);
-console.log(words)//['and', 'attitude.']
+console.log(words)//['and', 'attitude.'] */
+
+//searching an array
+/* let people = [
+    {
+        name: "umar",
+        age: 67,
+        class: "SS3a",
+    },
+    {
+        name: "Akanbi",
+        age: 97,
+        class: "SS3b",
+    }
+];
+//traditional way
+for(var i = 0; i < people.length;i++){
+    if(people[i].name == "umar"){
+        console.log(people[i])
+        break;
+    };
+};
+//using find method
+let myGuy = people.find((person) => (
+    person.name == "umar"
+));
+//using findIndex method to get index
+let myGuy2 = people.findIndex((person) => (
+    person.name == "umar"
+));
+let mySurestGee = people[myGuy2]
+//comparing the 2 arrays
+function compareArrays(a,b){
+    if(JSON.stringify(a) === JSON.stringify(b)){
+        return console.log("Once a gee, Always a gee. 100. And yayy my code worked well");
+    }else{
+        return console.log("Oops there's obviously an error in your code. Trackback bruhhh");
+    }
+};
+compareArrays(myGuy,mySurestGee); */
+
+//converting a string into an array
+
+
