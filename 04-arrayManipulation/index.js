@@ -27,8 +27,8 @@ const arrayReduce = latestArrays.reduce(function(a,b){
 },5)
 console.log(arrayReduce)// 14 */
 
-/* //mapping and filtering array
-var people =[{
+//mapping and filtering array
+/* var people =[{
     id:2,
     username:'Taiwo',
     age:44
@@ -44,14 +44,12 @@ var people =[{
     age:19
 }
 ]
-people.map((person)=>(
-    console.log(person)// works fine
-))
-
 const filteredArray = people.filter((person) => (
     person.age > 19
 ))
-console.log(filteredArray)// works fine */
+filteredArray.map((person) =>(
+    console.log(person.age)//44 23
+)) */
 
 //sorting array
 /* var arrayToSort = [1, 2, 3, 4, 'E', 'a', 44, 'v'];
@@ -73,10 +71,10 @@ for (i = 1; i <= 12; i++){
         console.log("%i multiplied by %i = %i",i,j,i*j)
     }
 } */
-/* //looping through array
-const myArray = [23,2,3,4,5,8];
-for (var i = 0,length = myArray.length; i < length;i++){
-    console.log(myArray[i])//23 2 3 4 5 8 
+//for looping through array
+/* const myArray = [23,2,3,4,5,8,9];
+for (var i = 0; i < myArray.length && (myArray[i] != 9);i++){
+    console.log(myArray[i])//23 2 3 4 5 8
 }
 //for(i in myArray) console.log(myArray[i]);//not recommended
 //looping in reverse below
@@ -84,10 +82,71 @@ for(var i = myArray.length - 1;i > -1;i--){
     var twoValue = myArray[i] * 2;
     console.log(twoValue)//16 10 8 6 4 46
 } */
-
 //while loop
+/* someArrayToWOrk = [1, 2, 3, 4,23,4,56,7,11]
 var i = 0;
-while(i < 7 && i % 2 != 5){
-    console.log(i);//0 1 2 3 4 5 6
+var someString;
+while(i < someArrayToWOrk.length && i % 2 != 5){
+    someString += someArrayToWOrk[i].toString();
+    console.log(someArrayToWOrk[i]);//0 1 2 3 4 5 6
     i++;
 };
+console.log(someString)//undefined123423456711 use GPT for  why undefined is part of output */
+
+/* //array destructuring
+function area ([base, height]){
+    return ((base*height)/2)
+}
+const triangle = [2,5,7,8];
+console.log(area(triangle))//5 8
+//array comparison
+const compArray = [2,5,7,8]
+latestCompArray = JSON.stringify(compArray);
+latestCompArray2 = JSON.stringify(triangle);
+if(latestCompArray === JSON.stringify(latestCompArray2)){
+    console.log("Arrays" + latestCompArray + " and " + latestCompArray2 + " are same");
+}else{
+    console.log("Arrays" + latestCompArray + " and " + latestCompArray2 + " are not same");
+}
+//reversing an array
+console.log(compArray.reverse());// [8, 7, 5, 2]
+console.log(compArray);// [8, 7, 5, 2] hmmmm. interesting */
+
+//concatenating arrays
+/* var array1 = [2,5,7,8];
+var array2 = [7,8,6];
+//var array1 = array1.concat(array2);
+//or
+//var array1 = [...array1,...array2];
+//or
+//array1.push(...array1);
+//array spreading and rest
+array3 = [..."7894"].map(x => parseInt(x));
+array1.push(...array2,17,19,...array3);
+console.log(array1)//[2, 5, 7, 8, 7, 8, 6, 17, 19, 'a', 'b', 'c', 'g', 'h', 'g']
+function addArray(a,b,c){
+    return a + b + c;
+};
+console.log(addArray(...array2));//21
+function usingRest(a,b,c,...rest){
+    var sum = 0;
+    console.log(rest);
+    for(var i = 0; i < rest.length; i++){
+        sum += rest[i];//[8, 7, 8, 6, 17, 19, 7, 8, 9, 4]
+    }
+    console.log(sum)//93
+}
+usingRest(...array1); */
+
+//more on filter
+function checkForLetterA(str){
+    if(str && str[0].toLowerCase() == "a" ){
+        return true;
+    }
+    return false;
+}
+
+var str = "Hello Fuck umar and his shitty attitude.";
+var splitStr = str.split(" ");
+var words = splitStr.filter(checkForLetterA);
+console.log(words)//['and', 'attitude.']
