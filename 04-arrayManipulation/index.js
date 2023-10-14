@@ -224,3 +224,35 @@ const maxNum = Math.max(...numArray)
 
 console.log(intMinNum,minNum,maxNum)//1 1 4
  */
+
+//initializing an array
+var array01 = [1,2,3,4]
+var array02 = new Array(1,2,3,4)
+var array03 = new Array(3)//creates empty array with length 3
+var array04 = new Array("foo")
+var array05 = Array.of("Hell","Is","Real",".","Fear","666")
+var someString = ""
+if(JSON.stringify(array01) === JSON.stringify(array02)){
+    console.log(array03)//[empty × 3]
+    console.log(array04)//["foo"]
+
+    var anotherString = array05.join(" ");
+    for(var i = 0; i < array05.length;i++){
+        if (i != 0 && i != 3)
+        {
+            someString += " "+array05[i];
+        }else{
+            someString += array05[i];
+        }
+    };
+
+    console.log(array05)//["Hell","Is","Real",".","Fear","666"]
+    console.log(someString)//Hell Is Real. Fear 666 - note the diff with the one below
+    console.log(anotherString)//Hell Is Real . Fear 666
+    console.log("Moh you're awesome")
+}else{
+    console.log("Fix the code to see something cool.Maybe not cool cool but at my current level of expertise as i type this, i find the correct output COOL!!!")
+}
+
+
+
