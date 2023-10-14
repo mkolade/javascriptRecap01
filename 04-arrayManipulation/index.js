@@ -190,9 +190,30 @@ function compareArrays(a,b){
 };
 compareArrays(myGuy,mySurestGee); */
 
-//converting a string into an array
-const strArray = "Hello My Neighbour".split(" ")
+//converting a string into an array- This chapter might be a little confusing. comment out the console logs as you like
+/* var strArray = "Hello My Neighbour".split(" ")
+var newStrArray = [..."Neighbour"]
 console.log(strArray)//['Hello', 'My', 'Neighbour']
-const strArrays = [..."Neighbour"]
-console.log(strArrays)//['N', 'e', 'i', 'g', 'h', 'b', 'o', 'u', 'r']
-//
+console.log(newStrArray)//['N', 'e', 'i', 'g', 'h', 'b', 'o', 'u', 'r']
+//removing an item from an array
+strArray.pop();//remove last item
+console.log(strArray)//['Hello', 'My']
+delete strArray[0]
+console.log(strArray)//[empty, 'My']
+
+newStrArray.shift();//remove first item
+console.log(newStrArray)//['e', 'i', 'g', 'h', 'b', 'o', 'u', 'r']
+var someArray01 = newStrArray.splice(0,5) //remove item with index included in details
+console.log(newStrArray)//['o', 'u', 'r']
+console.log(someArray01)//['e', 'i', 'g', 'h', 'b']
+newStrArray.length = 2;
+console.log(newStrArray)//['o', 'u']
+//removing all elements
+strArray.length = 0;
+someArray01 = [];
+console.log(strArray,someArray01)//[] []
+var someArray = newStrArray.splice(0);
+console.log(newStrArray)//[]
+console.log(someArray)//['o', 'u'] */
+
+
