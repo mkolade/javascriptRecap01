@@ -176,10 +176,10 @@ let myGuy = people.find((person) => (
     person.name == "umar"
 ));
 //using findIndex method to get index
-let myGuy2 = people.findIndex((person) => (
+let myGuyNum = people.findIndex((person) => (
     person.name == "umar"
 ));
-let mySurestGee = people[myGuy2]
+let mySurestGee = people[myGuyNum]
 //comparing the 2 arrays
 function compareArrays(a,b){
     if(JSON.stringify(a) === JSON.stringify(b)){
@@ -191,5 +191,8 @@ function compareArrays(a,b){
 compareArrays(myGuy,mySurestGee); */
 
 //converting a string into an array
-
-
+const strArray = "Hello My Neighbour".split(" ")
+console.log(strArray)//['Hello', 'My', 'Neighbour']
+const strArrays = [..."Neighbour"]
+console.log(strArrays)//['N', 'e', 'i', 'g', 'h', 'b', 'o', 'u', 'r']
+//
