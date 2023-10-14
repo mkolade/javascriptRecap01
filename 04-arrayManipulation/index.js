@@ -254,8 +254,11 @@ if(JSON.stringify(array01) === JSON.stringify(array02)){
     console.log("Fix the code to see something cool.Maybe not cool cool but at my current level of expertise as i type this, i find the correct output COOL!!!")
 } */
 
-
-
-
-
+//(Append and prepend into an  arrays) && (using instanceOf & .isArray)
+var theArray = [3,4];
+theArray.unshift(1,2);
+theArray.push(5,6);
+if((theArray instanceof Array) && Array.isArray(theArray)){
+    console.log(theArray);//[1, 2, 3, 4, 5, 6]
+}
 
