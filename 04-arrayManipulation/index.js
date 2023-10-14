@@ -260,5 +260,9 @@ theArray.unshift(1,2);
 theArray.push(5,6);
 if((theArray instanceof Array) && Array.isArray(theArray)){
     console.log(theArray);//[1, 2, 3, 4, 5, 6]
+    //inserting item into array at specific index
+    var i = theArray.length;
+    var qArray = theArray.splice(i,0,"x","y","d")
+    console.log(theArray)//[1, 2, 3, 4, 5, 6, 'x', 'y', 'd']
 }
 
