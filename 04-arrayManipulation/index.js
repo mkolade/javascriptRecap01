@@ -226,7 +226,7 @@ console.log(intMinNum,minNum,maxNum)//1 1 4
  */
 
 //initializing an array
-var array01 = [1,2,3,4]
+/* var array01 = [1,2,3,4]
 var array02 = new Array(1,2,3,4)
 var array03 = new Array(3)//creates empty array with length 3
 var array04 = new Array("foo")
@@ -252,7 +252,10 @@ if(JSON.stringify(array01) === JSON.stringify(array02)){
     console.log("Moh you're awesome")
 }else{
     console.log("Fix the code to see something cool.Maybe not cool cool but at my current level of expertise as i type this, i find the correct output COOL!!!")
-}
+} */
+
+
+
 
 
 
