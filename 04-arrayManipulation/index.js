@@ -255,7 +255,7 @@ if(JSON.stringify(array01) === JSON.stringify(array02)){
 } */
 
 //(Append and prepend into an  arrays) && (using instanceOf & .isArray)
-var theArray = [3,4];
+/* var theArray = [3,4];
 theArray.unshift(1,2);
 theArray.push(5,6);
 if((theArray instanceof Array) && Array.isArray(theArray)){
@@ -264,5 +264,5 @@ if((theArray instanceof Array) && Array.isArray(theArray)){
     var i = theArray.length;
     var qArray = theArray.splice(i,0,"x","y","d")
     console.log(theArray)//[1, 2, 3, 4, 5, 6, 'x', 'y', 'd']
-}
+} */
 
