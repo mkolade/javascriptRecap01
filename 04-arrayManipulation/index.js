@@ -216,4 +216,11 @@ var someArray = newStrArray.splice(0);
 console.log(newStrArray)//[]
 console.log(someArray)//['o', 'u'] */
 
+//finding max and min
+/* var numArray = [1,2,3,4]
+const intMinNum = Math.min.apply(null,numArray)
+const minNum = Math.min(...numArray)
+const maxNum = Math.max(...numArray)
 
+console.log(intMinNum,minNum,maxNum)//1 1 4
+ */
