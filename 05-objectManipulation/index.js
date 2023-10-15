@@ -29,3 +29,19 @@ for(var props in someObj){
         console.log(props);
     }
 } */
+
+/* //Object assign
+var someUser = {
+    firstName:"John"
+}
+var otherUserDetails = {
+    lastName:"Kentucky",
+    dob:"05-1-2004",
+    mainPassword:"#Manager2442",
+    favoriteKink:"Boobs"
+}
+var latestDetails = {
+    tod:"unAssigned"
+}
+Object.assign(someUser,latestDetails,undefined,{...otherUserDetails});
+console.log(someUser)//{firstName: 'John', lastName: 'Kentucky', dob: '05-1-2004', mainPassword: '#Manager2442', favoriteKink: 'Boobs', tod: "unAssigned"} */
