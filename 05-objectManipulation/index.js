@@ -45,3 +45,17 @@ var latestDetails = {
 }
 Object.assign(someUser,latestDetails,undefined,{...otherUserDetails});
 console.log(someUser)//{firstName: 'John', lastName: 'Kentucky', dob: '05-1-2004', mainPassword: '#Manager2442', favoriteKink: 'Boobs', tod: "unAssigned"} */
+
+// Dynamic / variable property names
+/* var dictionary = {
+    veggie:"acronym for vegetables",
+    apple:"a for apple",
+    lettuce:"a form of veggie"
+}
+var word = prompt('enter unique word to be found');
+var definition = dictionary[word.toLowerCase()]
+if(word){
+    alert(`${word} - ${definition}`)
+}
+console.log(dictionary[word.toLowerCase()])//works
+ */
