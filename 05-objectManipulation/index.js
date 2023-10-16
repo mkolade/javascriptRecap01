@@ -75,3 +75,32 @@ var array = Object.keys(dictionary).map(function(key){
     return dictionary[key];
 })
 console.log(array)// (6) [0: 23 1: "tom" 2: "acronym for vegetables" 3: "a for apple" 4: "a form of veggie" 5: "The most amazing fruit ever" length: 6][[Prototype]]: Array(0) woww this works */
+
+//Retrieving properties from an object
+/* var obj = {
+    a:'A1',
+    b:'B2',
+    c:'C+',
+    d:'D7',
+    e:'E8',
+    f:'F9'
+}
+// setting a  Read-Only property and making sure it shows up in a for in loop and also preventing it from being configurable
+Object.defineProperty(obj,'c2',{
+    value:'C-',
+    writable:false,
+    enumerable:true,
+    configurable:false
+});
+var getPropertyResult = Object.getOwnPropertyDescriptor(obj,'c2');
+//Object.defineProperty(obj,'c2',{writable:true})//fails
+obj.c2 = 'CC';//this fails
+//for in method
+var props = [];
+for (property in obj){
+    props.push(property);
+}
+
+console.log(obj)//{ a: "A1" b: "B2" c: "C+" d: "D7" e: "E8" f: "F9" c2: "C-" }
+console.log(props)//['a', 'b', 'c', 'd', 'e', 'f', 'c2']
+console.log(getPropertyResult)//{value: 'C-', writable: false, enumerable: true, configurable: false} */
