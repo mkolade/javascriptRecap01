@@ -26,7 +26,7 @@ console.log(deepClone);// {0: 'kd', 1: 'ok', 2: 'mk', 3: 'md', 4: {…}, length:
 //iterating over an object
 for(var props in someObj){
     if(someObj.hasOwnProperty(props)){
-        console.log(props);
+        console.log(props);// 0 1 2 3 4 length
     }
 } */
 
@@ -47,15 +47,20 @@ Object.assign(someUser,latestDetails,undefined,{...otherUserDetails});
 console.log(someUser)//{firstName: 'John', lastName: 'Kentucky', dob: '05-1-2004', mainPassword: '#Manager2442', favoriteKink: 'Boobs', tod: "unAssigned"} */
 
 // Dynamic / variable property names
-/* var dictionary = {
+/* var favoriteFruit = "pineapple";
+var dictionary = {
     veggie:"acronym for vegetables",
     apple:"a for apple",
-    lettuce:"a form of veggie"
+    lettuce:"a form of veggie",
+    [favoriteFruit]:"The most amazing fruit ever"
 }
-var word = prompt('enter unique word to be found');
-var definition = dictionary[word.toLowerCase()]
+const p = "Enter unique word to be found.For bonus points, try to guess my favorite fruit by guessing it"
+var word = prompt(p).toLowerCase();
+var definition = dictionary[word]
 if(word){
-    alert(`${word} - ${definition}`)
-}
-console.log(dictionary[word.toLowerCase()])//works
- */
+    if(word == favoriteFruit){
+        console.log(`4Pts\nConfirmed!!. You have great taste \n${word.toUpperCase()}-: ${definition}`)
+    }
+    else console.log(`2Pts \n${word.toUpperCase()} - ${definition}`);
+} */
+
