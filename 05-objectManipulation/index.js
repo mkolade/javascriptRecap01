@@ -52,15 +52,26 @@ var dictionary = {
     veggie:"acronym for vegetables",
     apple:"a for apple",
     lettuce:"a form of veggie",
-    [favoriteFruit]:"The most amazing fruit ever"
+    [favoriteFruit]:"The most amazing fruit ever",
+    '0':23,
+    '1':'tom'
 }
+var anArray = [23,'tom','string']
 const p = "Enter unique word to be found.For bonus points, try to guess my favorite fruit by guessing it"
 var word = prompt(p).toLowerCase();
-var definition = dictionary[word]
 if(word){
+    var definition = dictionary[word]
     if(word == favoriteFruit){
         console.log(`4Pts\nConfirmed!!. You have great taste \n${word.toUpperCase()}-: ${definition}`)
     }
     else console.log(`2Pts \n${word.toUpperCase()} - ${definition}`);
-} */
-
+}
+//arrays are objects
+console.log(dictionary[0],anArray[0])// 23 23 !interesting
+console.log(dictionary[1],anArray[1])// tom tom !interesting
+console.log(anArray.length,dictionary.length)// 3 undefined
+// Convert object's values to array
+var array = Object.keys(dictionary).map(function(key){
+    return dictionary[key];
+})
+console.log(array)// (6) [0: 23 1: "tom" 2: "acronym for vegetables" 3: "a for apple" 4: "a form of veggie" 5: "The most amazing fruit ever" length: 6][[Prototype]]: Array(0) woww this works */
