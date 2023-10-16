@@ -95,26 +95,33 @@ Object.defineProperty(obj,'c2',{
 var getPropertyResult = Object.getOwnPropertyDescriptor(obj,'c2');
 //Object.defineProperty(obj,'c2',{writable:true})//fails
 obj.c2 = 'CC';//this fails
-//for in method
-var props = [];
-for (property in obj){
-    props.push(property);
-}
-//keys method
-var keys = Object.keys(obj)
 
 console.log(obj)//{ a: "A1" b: "B2" c: "C+" d: "D7" e: "E8" f: "F9" c2: "C-" }
-console.log(props)//['a', 'b', 'c', 'd', 'e', 'f', 'c2']
-console.log(keys)//['a', 'b', 'c', 'd', 'e', 'f', 'c2']
 console.log(getPropertyResult)//{value: 'C-', writable: false, enumerable: true, configurable: false} */
 
-//Iterating over Object entries - Object.entries()
-var numObj = {
+//Iterating over Object
+/* var numObj = {
     one: 1,
     two:2,
     three:3
 }
+//for in method
+var props = [];
+for (property in numObj){
+    props.push(property);
+}
+console.log(props)//['one', 'two', 'three']
+
+//keys method
+var keys = Object.keys(numObj)
+console.log(keys)//['one', 'two', 'three']
+
+//values method
+var values = Object.values(numObj)
+console.log(values)//[1, 2, 3]
+
+//Object.entries() && for of
 var objEntries = Object.entries(numObj)
 for (const [key,value] of objEntries){
     console.log("Key:" + key +" Value:" + value)
-}//Key:one Value:1 Key:two Value:2 Key:three Value:3
+}//Key:one Value:1 Key:two Value:2 Key:three Value:3 */
