@@ -85,7 +85,7 @@ console.log(array)// (6) [0: 23 1: "tom" 2: "acronym for vegetables" 3: "a for a
     e:'E8',
     f:'F9'
 }
-// setting a  Read-Only property and making sure it shows up in a for in loop and also preventing it from being configurable
+// setting a  Read-Only property and making sure it shows up in a for in loop while also preventing it from being configurable
 Object.defineProperty(obj,'c2',{
     value:'C-',
     writable:false,
@@ -100,7 +100,21 @@ var props = [];
 for (property in obj){
     props.push(property);
 }
+//keys method
+var keys = Object.keys(obj)
 
 console.log(obj)//{ a: "A1" b: "B2" c: "C+" d: "D7" e: "E8" f: "F9" c2: "C-" }
 console.log(props)//['a', 'b', 'c', 'd', 'e', 'f', 'c2']
+console.log(keys)//['a', 'b', 'c', 'd', 'e', 'f', 'c2']
 console.log(getPropertyResult)//{value: 'C-', writable: false, enumerable: true, configurable: false} */
+
+//Iterating over Object entries - Object.entries()
+var numObj = {
+    one: 1,
+    two:2,
+    three:3
+}
+var objEntries = Object.entries(numObj)
+for (const [key,value] of objEntries){
+    console.log("Key:" + key +" Value:" + value)
+}//Key:one Value:1 Key:two Value:2 Key:three Value:3
