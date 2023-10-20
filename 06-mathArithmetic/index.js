@@ -116,7 +116,7 @@ var min = Math.min(...numArray)
 var max = Math.max(...numArray)
 console.log(min,max);//1 34 */
 
-//Ceiling and Floor again
+/* //Ceiling and Floor again
 var myRandomNum = Math.random();
 var ceilNum = Math.ceil(myRandomNum + 3);//4
 var someRand = Math.random();
@@ -127,3 +127,7 @@ var mathSqrt = Math.sqrt(16);
 var cubeRoot = Math.cbrt(8);
 var nthRoot = Math.pow(16,1/n);
 console.log(mathSqrt,cubeRoot,nthRoot);//4,2,2.5
+
+//random in gaussian
+var gaussRandom = (Math.random() + Math.random()) / 2;
+console.log(gaussRandom) */
