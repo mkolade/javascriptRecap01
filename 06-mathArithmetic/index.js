@@ -80,9 +80,26 @@ console.log(Math.pow(b,a));//49
 console.log(b ** a);//49
 console.log(Math.pow(c,1/3));//2
 //Math.random() -- returns between 0 and 1
-console.log(Math.random());
-//with min and max
-function minAndMax(max,min){
-    return Math.random() * (max - min) + min;
+console.log(Math.random()); */
+//addition
+/* var a = 2; b = 18;; c = 98;
+console.log(a + b + c + "1");//1181 */
+
+//get random number with min and max specified
+/* function minAndMax(max,min){
+    return Math.floor(Math.random() * (max - min ) + min);//with math.floor(), it releases a whole number
 }
-console.log(minAndMax(6,4))// wow this works */
+console.log(minAndMax(10,37));// wow this works */
+
+//Simulating events with different probabilities
+/* function rollDice (numPick){
+    return Math.floor(Math.random() * numPick)
+}
+console.log("Rolled a: " + (rollDice(6) + 1));//added a +1 so outcome 0 would never be possible */
+
+//subtraction
+var a = 11;
+console.log(5 - "false");//should be NaN
+console.log(5 - false);//should be 5
+console.log(5 - true);//should be 4
+console.log(5 - a);//should be -6
