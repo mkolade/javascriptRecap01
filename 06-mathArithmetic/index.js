@@ -98,8 +98,20 @@ console.log(minAndMax(10,37));// wow this works */
 console.log("Rolled a: " + (rollDice(6) + 1));//added a +1 so outcome 0 would never be possible */
 
 //subtraction
-var a = 11;
+/* var a = 11;
 console.log(5 - "false");//should be NaN
 console.log(5 - false);//should be 5
 console.log(5 - true);//should be 4
 console.log(5 - a);//should be -6
+//multiplication
+console.log(-3 * 5);//-15
+console.log(3 * 5);//15
+//math max and min
+var a = 57; var b = 89;
+console.log(Math.max(a,b))//89
+console.log(Math.min(a,b))//57
+//for arrays
+var numArray = [1,4,7,8,34];
+var min = Math.min(...numArray)
+var max = Math.max(...numArray)
+console.log(min,max);//1 34 */
