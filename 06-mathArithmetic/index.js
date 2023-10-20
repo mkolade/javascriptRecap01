@@ -75,6 +75,14 @@ for(var b = 0; b < 10; b++){
 }
 console.log(`This is the total sum of b: %d`,sum2s)//hmm weird */
 //Math.pow() or **
-var a = 2; var b = 7;
+/* var a = 2; b = 7, c = 8;
 console.log(Math.pow(b,a));//49
 console.log(b ** a);//49
+console.log(Math.pow(c,1/3));//2
+//Math.random() -- returns between 0 and 1
+console.log(Math.random());
+//with min and max
+function minAndMax(max,min){
+    return Math.random() * (max - min) + min;
+}
+console.log(minAndMax(6,4))// wow this works */
