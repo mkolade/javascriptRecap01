@@ -52,3 +52,29 @@ function mathRound(value,power){
 };
 console.log(mathRound(myNum,2));//0.67
 console.log(mathRound(newNum,-2));//666700 */
+
+//Incrementing (++)
+/* var a = 5;//5
+console.log(a)//5
+var b = a++;//a + 1 = 6; b = 5
+console.log(a,b)//6 5
+var c = ++a;//a(6) + 1 = 7; c =  7
+console.log(a,b,c)//7 5 7
+var d = a;//a = 7 d = 7
+console.log(a,b,c,d)//7 5 7 7 */
+/* for(var a = 0; a < 10; ++a){
+    var sum1 = a;
+    console.log(a,sum1);
+    sum1 += a;
+}
+console.log(`This is the total sum of a: %d`,sum1)
+for(var b = 0; b < 10; b++){
+    var sum2s = b;
+    console.log(b,sum2s);
+    sum2s += b;
+}
+console.log(`This is the total sum of b: %d`,sum2s)//hmm weird */
+//Math.pow() or **
+var a = 2; var b = 7;
+console.log(Math.pow(b,a));//49
+console.log(b ** a);//49
