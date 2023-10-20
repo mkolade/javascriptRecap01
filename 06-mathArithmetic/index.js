@@ -115,3 +115,15 @@ var numArray = [1,4,7,8,34];
 var min = Math.min(...numArray)
 var max = Math.max(...numArray)
 console.log(min,max);//1 34 */
+
+//Ceiling and Floor again
+var myRandomNum = Math.random();
+var ceilNum = Math.ceil(myRandomNum + 3);//4
+var someRand = Math.random();
+console.log(`for ${myRandomNum}: the ceil is ${ceilNum}`,someRand);
+//sqrt cube root an nth root
+var n = 3;
+var mathSqrt = Math.sqrt(16);
+var cubeRoot = Math.cbrt(8);
+var nthRoot = Math.pow(16,1/n);
+console.log(mathSqrt,cubeRoot,nthRoot);//4,2,2.5
