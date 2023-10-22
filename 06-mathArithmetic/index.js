@@ -135,8 +135,11 @@ console.log(gaussRandom) */
 //division
 console.log(15 / 3);//5
 //decrement
-for (var a = 17; a >= 0; --a){
+for (var a = 16; a >= 0; --a){
     if (a % 2 == 0){
         console.log(a);
     }
 };//16 14 12 10 8 6 4 2 0
+
+//Bitwise operators
+
