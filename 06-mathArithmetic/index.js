@@ -133,13 +133,28 @@ var gaussRandom = (Math.random() + Math.random()) / 2;
 console.log(gaussRandom) */
 
 //division
-console.log(15 / 3);//5
+/* console.log(15 / 3);//5
 //decrement
 for (var a = 16; a >= 0; --a){
     if (a % 2 == 0){
         console.log(a);
     }
-};//16 14 12 10 8 6 4 2 0
+};//16 14 12 10 8 6 4 2 0 */
 
-//Bitwise operators
+//Constructor functions
+/* 
+//declaring
+function Cat(name,age){
+    this.name = name;
+    this.age = age;
+    this.sound = "Meow";
+};
 
+let newCat = new Cat("Uncle sam",32);
+console.log(newCat.sound,newCat.age,newCat.name);//Meow 32 Uncle sam
+Cat.prototype.speak = function() {
+    console.log(this.sound);//Meow
+};
+newCat.speak();
+console.log(newCat.constructor)// returns the function Cat
+console.log(newCat instanceof Cat)// true */
