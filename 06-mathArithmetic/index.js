@@ -160,6 +160,28 @@ console.log(newCat.constructor)// returns the function Cat
 console.log(newCat instanceof Cat)// true */
 
 //Declaring and initializing constants
-var foo;
+/* var foo;
 foo = 300;
-const setImmediate = 566;
+const setImmediate = 566; */
+
+//Mathematic operations
+/* var myA = 7;
+var myB = 4;
+myB += myA;
+console.log(myB)// 4 + 7 = 11
+
+var myC = 7;
+var myD = 4;
+myD -= myC;
+console.log(myD)// 4 - 7 = -3
+
+var multiplier = 7;
+var multi = 4;
+multi *= multiplier;
+console.log(multi)// 4 * 7 = 28
+
+
+var exponent = 3;
+var power = 2;
+exponent **= power;
+console.log(exponent)// 3 ^ 2 = 9 */
