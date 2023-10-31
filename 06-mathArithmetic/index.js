@@ -158,3 +158,8 @@ Cat.prototype.speak = function() {
 newCat.speak();
 console.log(newCat.constructor)// returns the function Cat
 console.log(newCat instanceof Cat)// true */
+
+//Declaring and initializing constants
+var foo;
+foo = 300;
+const setImmediate = 566;
