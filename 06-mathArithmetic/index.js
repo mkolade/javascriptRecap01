@@ -196,7 +196,15 @@ for (i = 0; i < 8; i += 2){
         console.log("%i-%s",i,array[j])
         //0-e 0-d 0-c 0-b 0-a 2-e 2-d 2-c 2-b 2-a 4-e 4-d 4-c 4-b 4-a 6-e 6-d 6-c 6-b 6-a
     };
-}; */
+}; 
+
+//for loop with continue
+for(var i = 0; i <= 10; i +=2){
+    if(i === 4){
+        continue;
+    }//4 is omitted
+    console.log(i)//0 2 6 8 10
+} */
 
 /* //for of loop - Best for arrays. 
 const numArray = [0,2,4,2,5,4]
@@ -228,3 +236,35 @@ Object.defineProperty(someObject,'age',{
 for (var key in someObject){
     console.log(key + ':' + someObject[key])//name:Mike Dean Profession:Engineer
 } */
+
+/* //While loop with continue
+var i = 20;
+while(i >= 2){
+    if(i === 14){
+        i = 11;
+        continue;
+    }//14 is omitted and replaced with 11. the loops continue with 11 - 2 = 9
+    console.log(i);//20 18 16 11 9 7 5 3
+    i -= 2;
+};
+//do while only executes once
+do{
+    console.log("I is greater than 3");//I is greater than 3
+}while(i > 3); */
+
+//break
+for (let i = 0; i < 5; i++){
+    if(i === 3){
+        break;
+    }
+    console.log(i);
+}
+var i = 0;
+while(i < 5){
+    if(i === 3){
+        break;
+    }
+    console.log(i);
+    i++;
+}
+//Break specific nested loops
