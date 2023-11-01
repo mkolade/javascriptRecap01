@@ -198,7 +198,7 @@ for (i = 0; i < 8; i += 2){
     };
 }; */
 
-//for of loop - Best for arrays. 
+/* //for of loop - Best for arrays. 
 const numArray = [0,2,4,2,5,4]
 const editedNum = new Set(numArray);// use set to remove duplicates
 for (let arrEle of editedNum){
@@ -221,4 +221,10 @@ for (var key of Object.keys(someObject)){
 };
 
 
-//for in loop - Used for object iteration
+//for in loop - Used for object iteration. Can't be used for arrays
+Object.defineProperty(someObject,'age',{
+    enumerable:false
+});
+for (var key in someObject){
+    console.log(key + ':' + someObject[key])//name:Mike Dean Profession:Engineer
+} */
