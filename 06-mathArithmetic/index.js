@@ -198,8 +198,15 @@ for (i = 0; i < 8; i += 2){
     };
 }; */
 
-//for of loop - Best for arrays
-const numArray = [0,2,4]
-for (let arrEle of numArray){
-    console.log(arrEle)//0 2 4
+//for of loop - Best for arrays. Doesn't work directly on objects
+const numArray = [0,2,4,2,5,4]
+const editedNum = new Set(numArray);// use set to remove duplicates
+for (let arrEle of editedNum){
+    console.log(arrEle)//0 2 4 5
 }
+const string = 'akolade';
+for (let str of string){
+    console.log(str)//a k o l a d e
+}
+
+//for in - Used for object iteration
