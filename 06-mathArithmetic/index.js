@@ -198,15 +198,27 @@ for (i = 0; i < 8; i += 2){
     };
 }; */
 
-//for of loop - Best for arrays. Doesn't work directly on objects
+//for of loop - Best for arrays. 
 const numArray = [0,2,4,2,5,4]
 const editedNum = new Set(numArray);// use set to remove duplicates
 for (let arrEle of editedNum){
     console.log(arrEle)//0 2 4 5
 }
+
 const string = 'akolade';
 for (let str of string){
     console.log(str)//a k o l a d e
 }
 
-//for in - Used for object iteration
+//for of Doesn't work directly on objects but it can still be manipulated
+const someObject = {
+    name:'Mike Dean',
+    age:98,
+    Profession:'Engineer'
+}
+for (var key of Object.keys(someObject)){
+    console.log(key + ':' + someObject[key]);//name:Mike Dean age:9 Profession:Engineer
+};
+
+
+//for in loop - Used for object iteration
