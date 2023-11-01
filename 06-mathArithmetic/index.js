@@ -185,3 +185,21 @@ var exponent = 3;
 var power = 2;
 exponent **= power;
 console.log(exponent)// 3 ^ 2 = 9 */
+
+//LOOPS
+
+//for loop
+/* var i,j;
+const array = ['a','b','c','d','e'];
+for (i = 0; i < 8; i += 2){
+    for (j = (array.length - 1); j >= 0; j--){
+        console.log("%i-%s",i,array[j])
+        //0-e 0-d 0-c 0-b 0-a 2-e 2-d 2-c 2-b 2-a 4-e 4-d 4-c 4-b 4-a 6-e 6-d 6-c 6-b 6-a
+    };
+}; */
+
+//for of loop - Best for arrays
+const numArray = [0,2,4]
+for (let arrEle of numArray){
+    console.log(arrEle)//0 2 4
+}
