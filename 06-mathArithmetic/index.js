@@ -253,7 +253,7 @@ do{
 }while(i > 3); */
 
 //break
-for (let i = 0; i < 5; i++){
+/* for (let i = 0; i < 5; i++){
     if(i === 3){
         break;
     }
@@ -266,9 +266,9 @@ while(i < 5){
     }
     console.log(i);
     i++;
-}
+} */
 //Break specific nested loops
-var i, j;
+/* var i, j;
 
 outerLoop:
 for(i = 2; i <= 18; i += 2){
@@ -279,4 +279,4 @@ for(i = 2; i <= 18; i += 2){
         }
         console.log(i , j);//2 4   2 8   2 12   2 16   2 20
     }
-}
+} */

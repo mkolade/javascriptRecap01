@@ -1,0 +1,40 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.mainDiv{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mainForm{
+    width: 70%;
+    height: auto;
+    padding: 30px;
+    border: 6px solid black;
+}
+.formInputs{
+    padding: 15px;
+    margin-bottom: 20px;
+}
+.formInputs label{
+    font-size: 20px;
+    font-weight: 800;
+}
+.formInputs input{
+    width: 60%;
+    padding: 3px 0px;
+}
+
+.mainForm button{
+    margin: 15px;
+    padding: 10px 15px;
+    font-size: 17px;
+    font-weight: 700;
+    border: 2px solid black;
+}
