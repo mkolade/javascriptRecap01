@@ -268,3 +268,15 @@ while(i < 5){
     i++;
 }
 //Break specific nested loops
+var i, j;
+
+outerLoop:
+for(i = 2; i <= 18; i += 2){
+    innerLoop:
+    for(j = 4; j <= 20; j += 4){
+        if(i == j){
+            break outerLoop;
+        }
+        console.log(i , j);//2 4   2 8   2 12   2 16   2 20
+    }
+}
