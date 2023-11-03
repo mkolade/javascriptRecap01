@@ -155,7 +155,7 @@ console.log(newCat.sound,newCat.age,newCat.name);//Meow 32 Uncle sam
 Cat.prototype.speak = function() {
     console.log(this.sound);//Meow
 };
-newCat.speak();
+newCat.speak();//meow
 console.log(newCat.constructor)// returns the function Cat
 console.log(newCat instanceof Cat)// true */
 

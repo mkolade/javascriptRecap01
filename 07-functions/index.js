@@ -35,7 +35,7 @@ console.log(prismVol(1)(2)(3));//6
 }()); */
 
 //recursive && named functions
-var someSay = function sum(times){
+/* var someSay = function sum(times){
     if(times > 0){
         console.log("Hello!");
         sum(times - 1);
@@ -44,4 +44,30 @@ var someSay = function sum(times){
 var saySomething = someSay;
 saySomething(2);//Hello! Hello!
 //sum(2);//reference error
-console.log(saySomething.name)//sum
+console.log(saySomething.name)//sum */
+
+//variadic functions
+/* function argLogger(){
+    var myArray = Array.from(arguments);
+    for(var i = 0; i < arguments.length; ++i){
+        console.log(arguments[i])
+    }
+    console.log(myArray);
+}
+argLogger("Hello","World");//Hello World, (2) ['Hello', 'World']
+
+const list = [1,2,3]
+function usingSpread(...arg){
+    console.log(arg);
+};
+//usingSpread(...list,4,5,6,...789); WRONG!! 
+usingSpread(...list,4,5,6,..."789");//(6) [1, 2, 3, 4, 5, 6, "7", "8", "9"]
+
+function personLOgs(person,...msgs){
+    msgs.forEach(msg =>(
+        console.log(person,"says",msg)
+    ));
+};
+personLOgs("MK","Hello","World!");//MK says Hello, MK says World! */
+
+
