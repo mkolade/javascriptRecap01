@@ -91,3 +91,11 @@ console.log(doubleNum)//(3) [2, 4, 6]
         console.log(foo);//47
     }()
 ); */
+
+//Default parameters
+function printDefaultMsg(msg = "This is my default message"){
+    console.log(msg);
+}
+printDefaultMsg();//This is my default message 
+printDefaultMsg(undefined);//This is my default message
+printDefaultMsg('No longer default  message');//No longer default   message
