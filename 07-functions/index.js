@@ -29,6 +29,7 @@ function prismVol(l){
     }
 }
 console.log(prismVol(1)(2)(3));//6
+
 //IIFE=-Immediately invoked function Expressions
 (function(){
     console.log(46);
@@ -70,4 +71,23 @@ function personLOgs(person,...msgs){
 };
 personLOgs("MK","Hello","World!");//MK says Hello, MK says World! */
 
+//Anonymous Function
+/* //usage
+var foo = function(){
+    console.log('foo');
+};
+foo();//foo
 
+var num = [1,2,3]
+var doubleNum = num.map(function(element){
+    return element * 2;
+})
+console.log(doubleNum)//(3) [2, 4, 6]
+
+//used as iife - It executes once. only at runtime
+(
+    function(){
+        var foo = 57;
+        console.log(foo);//47
+    }()
+); */
