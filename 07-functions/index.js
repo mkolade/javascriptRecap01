@@ -98,4 +98,4 @@ function printDefaultMsg(msg = "This is my default message"){
 }
 printDefaultMsg();//This is my default message 
 printDefaultMsg(undefined);//This is my default message
-printDefaultMsg('No longer default  message');//No longer default   message
+printDefaultMsg('No longer default message');//No longer default  message
