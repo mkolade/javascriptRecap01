@@ -99,3 +99,17 @@ function printDefaultMsg(msg = "This is my default message"){
 printDefaultMsg();//This is my default message 
 printDefaultMsg(undefined);//This is my default message
 printDefaultMsg('No longer default message');//No longer default  message
+
+function defaultFunc( callback = function (){console.log('Default')}){
+    callback();
+};
+defaultFunc();//default
+defaultFunc(undefined);//default
+defaultFunc(function (){console.log("Fuck yes!!. We don't do default bitch")});//Fuck yes!!. We don't do default bitch
+
+var num = 3;
+function multiply(x){return x * 2};
+function add(a = 1 + num, b = a, c = a + b, d = multiply(c)){
+    return a * b * c + d;
+};
+console.log(Math.sqrt(add()));//12
