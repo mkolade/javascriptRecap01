@@ -34,10 +34,15 @@ for (s = 0; s <= 10; s++){
 console.log(sum);
 
 //006 - Calculate 10!
-var s, sum = 1;
+var s, multiple = 1;
 for (s = 1; s <= 10; s++){
-    sum *= s;
+    multiple *= s;
+};
+console.log(multiple);
+
+//007 - Calculate the sum of even numbers greater than 10 and less than 30
+var s, sum = 0;
+for (s; (s > 10) && (s < 30); s++){
+    sum += s;
 };
 console.log(sum);
-
-//Calculate the sum of even numbers greater than 10 and less than 30
