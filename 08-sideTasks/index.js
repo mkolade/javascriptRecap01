@@ -32,3 +32,12 @@ for (s = 0; s <= 10; s++){
     sum += s;
 };
 console.log(sum);
+
+//006 - Calculate 10!
+var s, sum = 1;
+for (s = 1; s <= 10; s++){
+    sum *= s;
+};
+console.log(sum);
+
+//Calculate the sum of even numbers greater than 10 and less than 30
