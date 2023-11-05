@@ -93,7 +93,7 @@ console.log(doubleNum)//(3) [2, 4, 6]
 ); */
 
 //Default parameters
-function printDefaultMsg(msg = "This is my default message"){
+/* function printDefaultMsg(msg = "This is my default message"){
     console.log(msg);
 }
 printDefaultMsg();//This is my default message 
@@ -112,4 +112,25 @@ function multiply(x){return x * 2};
 function add(a = 1 + num, b = a, c = a + b, d = multiply(c)){
     return a * b * c + d;
 };
-console.log(Math.sqrt(add()));//12
+console.log(Math.sqrt(add()));//12 */
+
+//Call & Apply
+var obj = {
+    a:1,
+    b:2,
+    set: function(a,b){
+        this.a = a,
+        this.b = b
+    }
+};
+console.log(obj);//{a: 1, b: 2, set: ƒ}
+obj.set(3,7);//
+console.log(obj);//{a: 3, b: 7, set: ƒ}
+obj.set.call(obj,1,2);
+//console.log(obj);//{a: 1, b: 2, set: ƒ}
+obj.set.apply(obj,[1, 3]);
+//console.log(obj)//{a: 1, b: 3, set: ƒ}
+let myObj = {};
+obj.set.apply(myObj, [4,7]);
+console.log(myObj);//{a: 4, b: 7}
+//bind
