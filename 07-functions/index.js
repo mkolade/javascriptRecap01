@@ -115,7 +115,7 @@ function add(a = 1 + num, b = a, c = a + b, d = multiply(c)){
 console.log(Math.sqrt(add()));//12 */
 
 //Call & Apply
-var obj = {
+/* var obj = {
     a:1,
     b:2,
     set: function(a,b){
@@ -134,3 +134,16 @@ let myObj = {};
 obj.set.apply(myObj, [4,7]);
 console.log(myObj);//{a: 4, b: 7}
 //bind
+function bindName(label){
+    console.log(label + ': ' + this.name);
+};
+var myStudent1 = {
+    name:"Akolade"
+};
+var myStudent2 = {
+    name:"Jato"
+};
+var bindStudentName = bindName.bind(myStudent1);
+bindStudentName("myStudent1");//myStudent1: Akolade
+var bindStudentName2 = bindName.bind(myStudent2,"studentName");
+bindStudentName2();//studentName: Jato */
