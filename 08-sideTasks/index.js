@@ -46,3 +46,37 @@ for (s; (s > 10) && (s < 30); s++){
     sum += s;
 };
 console.log(sum);
+
+//008 - Create a function that will convert from Celsius to Fahrenheit
+var div = (9/5);
+function celToFah(n){
+    var fah = (n * div) + 32;
+    return `${n} in Celsius is ${fah} in Fahrenheit` ;
+}
+console.log(celToFah(35))
+
+//009 - Create a function that will convert from Fahrenheit to Celsius
+var div = (5/9);
+function fahToCel(n){
+    var cel = (n - 32) * div;
+    return `${n} in Fahrenheit is ${cel} in Celsius` ;
+}
+console.log(fahToCel(95))
+
+//010 - Calculate the sum of numbers in an array of numbers
+var myArray = [1,2,3,4,5,6,7,8,9,10];
+var sum = 0;
+for (var i = 0; i < myArray.length; i++){
+    sum += myArray[i];
+}
+console.log(sum)
+
+//011 - Calculate the average of the numbers in an array of numbers
+var myArray = [1,2,3,4,5,6,7,8,9,10];
+var sum = 0, numI = 0;
+for (var i = 0; i < myArray.length; i++){
+    sum += myArray[i];
+    numI += 1;
+}
+let average = sum / numI;
+console.log(average);
