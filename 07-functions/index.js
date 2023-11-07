@@ -159,4 +159,14 @@ function addToObj(someObj){
 };
 console.log(addToObj(obj));//{a: 5, b: 9}
 
-//function composition - intro
+//function composition - small intro
+const compose = (...funs) =>   x =>   funs.reduce((ac, f) => f(ac), x);
+
+const capitalize = function (x){
+    return x.replace(/^\w/,m => m.toUpperCase());
+}
+const sign = function (x){
+    return x + "\nmade with love";
+}
+const formatText = compose(capitalize,sign);
+console.log(formatText("Hello Grand-kid"))
