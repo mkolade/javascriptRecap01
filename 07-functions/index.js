@@ -182,28 +182,34 @@ console.log(getMe.name);//getMe */
 console.log(functionName(getMe)) */
 
 //Recursion. I know, AGAIN??!!!
-//factorial
+/* //factorial
 function factorial(n){
     if(n <= 1){
         return 1;
     }
+    let facts = n * factorial(n - 1);
+    return facts;
+};
+console.log(factorial(5));
 
-    var fact = n * factorial(n - 1);
-    return fact;
-}
-console.log(factorial(2))
 //retrieve the sum of even numbers in an array
 var newArray = [2,4,5,6,7,8,9];
 function sumOfEven(arr){
-    if(arr.length <= 0){
+    if (arr.length === 0){
         return 0;
-    }
-    var arrayArgs = arr.shift();
-    if(arrayArgs % 2 == 0){
-        return arrayArgs + sumOfEven(arr);
+    };
+    var myValue = arr.shift();
+    if(myValue % 2 === 0){
+        return myValue + sumOfEven(arr);
     }else{
         return sumOfEven(arr);
     }
+}
+console.log(sumOfEven(newArray)) */
+
+//understanding the return statement
+/* function retFirstChar(str){
+    console.log("Coding is fun");
+    return str.charAt(0);
 };
-var sum = sumOfEven(newArray);
-console.log(sum);//20
+console.log(retFirstChar("Hi.babe"));//Coding is fun H */
