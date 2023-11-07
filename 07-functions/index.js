@@ -149,7 +149,7 @@ var bindStudentName2 = bindName.bind(myStudent2,"studentName");
 bindStudentName2();//studentName: Jato */
 
 //Passing arguments by reference or value
-var obj = {a:7};
+/* var obj = {a:7};
 function addToObj(someObj){
     //someObj = {a:5};//wont work
     //someObj = {b:9};//wont work
@@ -170,3 +170,40 @@ const sign = function (x){
 }
 const formatText = compose(capitalize,sign);
 console.log(formatText("Hello Grand-kid"))
+//getting a function's name
+function getMe(){
+    return null;
+}
+console.log(getMe.name);//getMe */
+/* function functionName( func ) {
+    var result = /^function\s+([\w\$]+)\(/.exec( func.toString() )       
+    return result ? result[1] : '' 
+}
+console.log(functionName(getMe)) */
+
+//Recursion. I know, AGAIN??!!!
+//factorial
+function factorial(n){
+    if(n <= 1){
+        return 1;
+    }
+
+    var fact = n * factorial(n - 1);
+    return fact;
+}
+console.log(factorial(2))
+//retrieve the sum of even numbers in an array
+var newArray = [2,4,5,6,7,8,9];
+function sumOfEven(arr){
+    if(arr.length <= 0){
+        return 0;
+    }
+    var arrayArgs = arr.shift();
+    if(arrayArgs % 2 == 0){
+        return arrayArgs + sumOfEven(arr);
+    }else{
+        return sumOfEven(arr);
+    }
+};
+var sum = sumOfEven(newArray);
+console.log(sum);//20
