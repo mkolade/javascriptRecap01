@@ -147,3 +147,16 @@ var bindStudentName = bindName.bind(myStudent1);
 bindStudentName("myStudent1");//myStudent1: Akolade
 var bindStudentName2 = bindName.bind(myStudent2,"studentName");
 bindStudentName2();//studentName: Jato */
+
+//Passing arguments by reference or value
+var obj = {a:7};
+function addToObj(someObj){
+    //someObj = {a:5};//wont work
+    //someObj = {b:9};//wont work
+    someObj.a = 5;
+    someObj.b = 9;
+    return someObj;
+};
+console.log(addToObj(obj));//{a: 5, b: 9}
+
+//function composition - intro
