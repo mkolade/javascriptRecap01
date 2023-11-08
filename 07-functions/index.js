@@ -213,3 +213,34 @@ console.log(sumOfEven(newArray)) */
     return str.charAt(0);
 };
 console.log(retFirstChar("Hi.babe"));//Coding is fun H */
+
+//Higher order functions
+function iAmCallBack(){
+    console.log("You have reached callback");
+}
+
+function iDoStuff(callback){
+    console.log("I do stuff.");
+    return function iAmStuff(){
+        console.log('I am stuff.'); 
+        callback();
+    }
+};
+iDoStuff(iAmCallBack);//I do stuff
+iDoStuff(iAmCallBack)();//I do stuff. I am stuff. You have reached callback
+
+//Functions as Arguments
+var myArray = [1,2,3,4,5];
+function mul2(x){
+    return x * 2;
+}
+function multiplyByTwo (func,arr){
+    let result = [];
+    for(comp of arr){
+        result.push(func(comp));
+    };
+    return result;
+};
+var someArray = multiplyByTwo(mul2,myArray);
+console.log(someArray);//Array(5) 0:2 1:4 2:6 3:8 4:10 length:5
+
