@@ -80,3 +80,19 @@ for (var i = 0; i < myArray.length; i++){
 }
 let average = sum / numI;
 console.log(average);
+
+//012 - Create a function that receives an array of numbers as argument and returns an array containing only the positive numbers
+var myArray = [1,2,3,4,5,6,7,8,9,10];
+var posArray = [];
+function findPosArray (array){
+    for (let arr of array){
+        if(arr % 2 === 0){
+            posArray.push(arr)
+        }
+    }
+    console.log(posArray);
+    return posArray;
+};
+findPosArray(myArray);
+
+//013 - Find the maximum number in an array of numbers
