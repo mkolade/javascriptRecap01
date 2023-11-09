@@ -107,3 +107,33 @@ function findMax(arr){
     return max;
 };
 console.log(findMax(myArray));//10
+
+//fibonacci formula ;
+//f(0) = 0;
+//f(1) = 1;
+//f(n) = f(n-1) + f(n-2);
+
+//014 - Print the first 10 Fibonacci numbers without recursion
+var f = [];
+f[0] = 0;
+f[1] = 1;
+for(var i = 2; i < 10; i++){
+    f[i] = f[i - 1] + f[i - 2];
+    f.push(f[i]);
+}
+for(var i = 0; i < f.length; i++){
+    //console.log(`f${i} = ${f[i]}`);
+};
+
+//015 - Create a function that will find the nth Fibonacci number using recursion.
+function findFibonacci (n){
+    if(n === 0){
+        return 0;
+    }
+    if(n === 1){
+        return 1;
+    }
+
+    return findFibonacci(n - 1) + findFibonacci(n - 2);
+}
+console.log(findFibonacci(10));//55
