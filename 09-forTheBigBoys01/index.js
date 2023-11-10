@@ -1,6 +1,6 @@
 //CLASSES
 
-//declaration
+/* //declaration
 class myFirstTest{
     constructor(option){
         console.log(`Hi this was made with the ${option} option`);
@@ -28,19 +28,45 @@ class subClass extends superClass{
 };
 var displayName = new subClass();
 displayName.toLog();//Hello, this is Sam
+ */
 
-//Static Methods
+/* //Static Methods
 class staticClass{
     static myClassOps(){
         console.log("Hi fucker!!");
     };
     static get myClassGet(){
-        console.log("You dnt need to call me with () hahaha!!.");
+        console.log("You dnt need to call me with () so nice!!.");
     };
 }
 staticClass.myClassOps();//Hi fucker!!
-staticClass.myClassGet;//You dnt need to call me with () hahaha!!.
+staticClass.myClassGet;//You dnt need to call me with () so nice!!.
 class someNewClass extends staticClass{};
 var myNewClass = new staticClass();
 //myNewClass.myClassGet;//won't work
-someNewClass.myClassGet;//You dnt need to call me with () hahaha!!.
+someNewClass.myClassGet;//You dnt need to call me with () so nice!!. */
+
+//get and set - must be used together for it to work
+class myClass{
+    constructor(){
+        this.nameArray = [];
+    };
+    set name(value){
+        this.nameArray.push(value);
+    };
+    get name(){
+        return this.nameArray[this.nameArray.length - 1];
+    };
+    //using methods
+    tryingSomething(data){
+        this.data = data;
+        return data;
+    };
+};
+var nameClass = new myClass();
+nameClass.name = "john";
+nameClass.name = "weird";
+nameClass.name = "amir";
+console.log(nameClass.name);//amir
+console.log(nameClass.nameArray);//(3) ['john', 'weird', 'amir']
+console.log(nameClass.tryingSomething("Something worked"));//Something worked
