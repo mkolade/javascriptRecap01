@@ -245,35 +245,3 @@ var someArray = multiplyByTwo(mul2,myArray);
 console.log(someArray);//Array(5) 0:2 1:4 2:6 3:8 4:10 length:5 */
 
 
-
-//CLASSES
-
-//declaration
-class speedyClass {
-    constructor(option){
-        console.log(`This is created with ${option} option`);
-        this.option = option;
-    };
-};
-const speedy = new speedyClass("speedy");//This is created with speedy option
-console.log(speedy.option);//speedy
-
-//inheritance
-class bigClass{
-    constructor(){
-        this.logger = console.log;
-    }
-    toLog(){
-        this.logger(`Hello class, this is ${this.name}`)
-    }
-}
-class smallClass extends bigClass{
-    constructor(){
-        super();
-        this.name = "Mike";
-    };
-};
-
-const newClass = new smallClass();
-newClass.toLog();
-
