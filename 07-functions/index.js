@@ -215,7 +215,7 @@ console.log(sumOfEven(newArray)) */
 console.log(retFirstChar("Hi.babe"));//Coding is fun H */
 
 //Higher order functions
-function iAmCallBack(){
+/* function iAmCallBack(){
     console.log("You have reached callback");
 }
 
@@ -227,10 +227,10 @@ function iDoStuff(callback){
     }
 };
 iDoStuff(iAmCallBack);//I do stuff
-iDoStuff(iAmCallBack)();//I do stuff. I am stuff. You have reached callback
+iDoStuff(iAmCallBack)();//I do stuff. I am stuff. You have reached callback */
 
 //Functions as Arguments
-var myArray = [1,2,3,4,5];
+/* var myArray = [1,2,3,4,5];
 function mul2(x){
     return x * 2;
 }
@@ -242,5 +242,17 @@ function multiplyByTwo (func,arr){
     return result;
 };
 var someArray = multiplyByTwo(mul2,myArray);
-console.log(someArray);//Array(5) 0:2 1:4 2:6 3:8 4:10 length:5
+console.log(someArray);//Array(5) 0:2 1:4 2:6 3:8 4:10 length:5 */
+
+
+
+//CLASSES
+class speedyClass {
+    constructor(option){
+        console.log(`This is created with ${option} option`);
+        this.option = option;
+    };
+};
+const speedy = new speedyClass("speedy");//This is created with speedy option
+console.log(speedy.option);//speedy
 
