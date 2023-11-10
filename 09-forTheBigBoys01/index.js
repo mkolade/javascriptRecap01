@@ -59,14 +59,40 @@ class myClass{
     };
     //using methods
     tryingSomething(data){
-        this.data = data;
+        this.data = data
         return data;
     };
 };
 var nameClass = new myClass();
+nameClass.tryingSomething("Something worked");
 nameClass.name = "john";
 nameClass.name = "weird";
 nameClass.name = "amir";
 console.log(nameClass.name);//amir
 console.log(nameClass.nameArray);//(3) ['john', 'weird', 'amir']
-console.log(nameClass.tryingSomething("Something worked"));//Something worked
+console.log(nameClass.data);//Something worked
+
+//Dynamic Method Names
+var printDetails = Symbol();
+class someCeleb{
+    constructor(name,job){
+        this.name = name;
+        this.job = job;
+    };
+    [printDetails](){
+        return{
+            name: this.name,
+            job: this.job
+        };
+    };
+    ["add"](a,b){
+        return a + b;
+    }
+    [1 + 3](){
+        return "Three";
+    }
+};
+let taylor = new someCeleb("Taylor Swift","Musician");
+console.log(taylor[printDetails]());//{name: 'Taylor Swift', job: 'Musician'}
+console.log(taylor.add(2,5));//7
+console.log(taylor[4]());//three
