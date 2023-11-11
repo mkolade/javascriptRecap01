@@ -98,7 +98,7 @@ console.log(taylor.add(2,5));//7
 console.log(taylor[4]());//Four */
 
 //Context (this)
-var somePerson = {
+/* var somePerson = {
     name:"Umar",
     height:"6'2 inch",
     age:21,
@@ -124,6 +124,23 @@ Person = function(){
 };
 Person();//My name is Taiwo
 Person.apply(person2);//My name is Taiwo
-Person.apply(person3);//My name is Taiwo
+Person.apply(person3);//My name is Taiwo */
 
 //Setters and Getters
+// Defining a Setter/Getter Using Object.defineProperty
+var setValue;
+var someObj = {};
+Object.defineProperty(someObj,"objGetAndSet",{
+    get : function(){
+        return `Your value is ${this.value}`;
+    },
+    set : function(value){
+        setValue = value;
+        this.value = value;
+    }
+});
+someObj.objGetAndSet = "Alright";
+console.log(someObj.objGetAndSet,setValue);
+
+// Defining an Setter/Getter in a Newly Created Object
+
