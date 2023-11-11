@@ -112,14 +112,18 @@ console.log(bio());//My name is  and i'm a undefinedyr old undefined striker.
 
 //hard-binding
 function Person(){
-    return `My name is ${this.name}`;
-}
+    return console.log(`My name is ${this.name}`);
+};
 var person1 = {  name: 'Taiwo' }; 
 var person2 = {  name: 'Kenny' }; 
 var person3 = {  name: 'Idoqu' }; 
 
-var mainFunc = Person;
+var origin = Person;
 Person = function(){
-    mainFunc.call(person1);
+    origin.call(person1);
 };
-console.log(Person());//My name is Taiwo
+Person();//My name is Taiwo
+Person.apply(person2);//My name is Taiwo
+Person.apply(person3);//My name is Taiwo
+
+//Setters and Getters
