@@ -169,7 +169,7 @@ const sign = function (x){
     return x + "\nmade with love";
 }
 const formatText = compose(capitalize,sign);
-console.log(formatText("Hello Grand-kid"))
+console.log(formatText("Hello Grand-kid"));
 //getting a function's name
 function getMe(){
     return null;

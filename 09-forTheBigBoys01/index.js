@@ -47,7 +47,7 @@ var myNewClass = new staticClass();
 someNewClass.myClassGet;//You dnt need to call me with () so nice!!. */
 
 //get and set - must be used together for it to work
-class myClass{
+/* class myClass{
     constructor(){
         this.nameArray = [];
     };
@@ -70,10 +70,10 @@ nameClass.name = "weird";
 nameClass.name = "amir";
 console.log(nameClass.name);//amir
 console.log(nameClass.nameArray);//(3) ['john', 'weird', 'amir']
-console.log(nameClass.data);//Something worked
+console.log(nameClass.data);//Something worked */
 
 //Dynamic Method Names
-var printDetails = Symbol();
+/* var printDetails = Symbol();
 class someCeleb{
     constructor(name,job){
         this.name = name;
@@ -89,10 +89,37 @@ class someCeleb{
         return a + b;
     }
     [1 + 3](){
-        return "Three";
+        return "Four";
     }
 };
 let taylor = new someCeleb("Taylor Swift","Musician");
 console.log(taylor[printDetails]());//{name: 'Taylor Swift', job: 'Musician'}
 console.log(taylor.add(2,5));//7
-console.log(taylor[4]());//three
+console.log(taylor[4]());//Four */
+
+//Context (this)
+var somePerson = {
+    name:"Umar",
+    height:"6'2 inch",
+    age:21,
+    bio: function (){
+        return (`My name is ${this.name} and i'm a ${this.age}yr old ${this.height} striker.`);
+    }
+};
+console.log(somePerson.bio());//My name is Umar and i'm a 21yr old 6'2 inch striker.
+var bio = somePerson.bio;
+console.log(bio());//My name is  and i'm a undefinedyr old undefined striker.
+
+//hard-binding
+function Person(){
+    return `My name is ${this.name}`;
+}
+var person1 = {  name: 'Taiwo' }; 
+var person2 = {  name: 'Kenny' }; 
+var person3 = {  name: 'Idoqu' }; 
+
+var mainFunc = Person;
+Person = function(){
+    mainFunc.call(person1);
+};
+console.log(Person());//My name is Taiwo
