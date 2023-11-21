@@ -132,17 +132,19 @@ Person.apply(person3);//My name is Taiwo */
 // Defining a Setter/Getter Using Object.defineProperty
 var setValue;
 var someObj = {};
-Object.defineProperty(someObj,"objGetAndSet",{
-    get : function(){
-        return `Your value is ${this.value}`;
+Object.defineProperty(someObj,"objKey",{
+    get: function(){
+        return 'Your value is %s',this.value;
     },
-    set : function(value){
-        setValue = value;
+    set: function(value){
         this.value = value;
+        setValue = value;
     }
 });
-someObj.objGetAndSet = "Alright";
-console.log(someObj.objGetAndSet,setValue);
+
+someObj.objKey = "Okay";
+console.log(someObj);//{value: 'Okay'}
+console.log(setValue);//Okay
 
 // Defining an Setter/Getter in a Newly Created Object
 
