@@ -79,7 +79,7 @@ class someCeleb{
         this.name = name;
         this.job = job;
     };
-    [printDetails](){
+[printDetails](){
         return{
             name: this.name,
             job: this.job
@@ -109,6 +109,8 @@ console.log(taylor[4]());//Four */
 console.log(somePerson.bio());//My name is Umar and i'm a 21yr old 6'2 inch striker.
 var bio = somePerson.bio;
 console.log(bio());//My name is  and i'm a undefinedyr old undefined striker.
+
+
 
 //hard-binding
 function Person(){
