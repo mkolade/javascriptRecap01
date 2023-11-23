@@ -56,3 +56,38 @@ sam = Object.setPrototypeOf(sam,second);
 console.log(sam.hi()); */
 
 //Method Chaining
+
+function Func(x = 0, y = 0){
+    this.x = x;
+    this.y = y;
+};
+Func.prototype = {
+    add: function(value){
+        this.x += value.x;
+        this.y += value.y;
+        return this;
+    },
+    mulByNum: function(num){
+        this.x *= num;
+        this.y *= num;
+        return this;
+    },
+    clone: function(){
+        return new Func(this.x,this.y);
+    },
+    log: function(){
+        console.log(`${this.x} : ${this.y}`);
+        return this;
+    }
+};
+
+var myFunc = new Func();
+myFunc.add({x:10, y:10})
+.add({x:10, y:10})
+.log()//20 : 20
+.mulByNum(2)
+.log()//40 : 40
+var myFunc2 = myFunc.clone()
+.log()//40 : 40
+.mulByNum(1/4)
+.log()//10 : 10
