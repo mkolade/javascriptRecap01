@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="./index.css">
     <title>Document</title>
 </head>
-<body>
+<body onload="loadFunc()">
     <div class="mainDiv">
         <form action="" class="mainForm">
             <div class="formInputs">
@@ -21,7 +21,7 @@
                 <label>Phone Number: </label>
                 <input type="text" >
             </div>
-            <button type="submit">Submit</button>
+            <button type="submit" onclick="runFunc()">Submit</button>
         </form>
         <div id="newPart">
             <h1>Adding a paragraph</h1>

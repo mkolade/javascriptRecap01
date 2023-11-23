@@ -147,8 +147,7 @@ console.log(someObj);//{value: 'Okay'}
 console.log(setValue);//Okay */
 
 // Defining getters and setters in ES6 class
-
-class Person{
+/* class Person{
     constructor(firstname,lastname){
         this._firstname = firstname;
         this._lastname = lastname;
@@ -174,4 +173,19 @@ class Person{
 
 var newPerson = new Person("Akin","Tayo");
 console.log(newPerson._firstname + " & " +newPerson.firstname);
-console.log(newPerson._lastname + " & " +newPerson.lastname);
+console.log(newPerson._lastname + " & " +newPerson.lastname); */
+
+
+
+// Events: Page, DOM and Browser loading
+function runFunc(){
+    console.log("Submit button clicked");
+};
+
+function loadFunc(){
+    console.log("Page loaded successfully");
+};
+
+document.addEventListener("DOMContentLoaded",function(){
+    console.log("i am loaded automatically by dom")
+})
