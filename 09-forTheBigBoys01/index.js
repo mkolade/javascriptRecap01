@@ -130,7 +130,7 @@ Person.apply(person3);//My name is Taiwo */
 
 //Setters and Getters
 // Defining a Setter/Getter Using Object.defineProperty
-var setValue;
+/* var setValue;
 var someObj = {};
 Object.defineProperty(someObj,"objKey",{
     get: function(){
@@ -144,7 +144,34 @@ Object.defineProperty(someObj,"objKey",{
 
 someObj.objKey = "Okay";
 console.log(someObj);//{value: 'Okay'}
-console.log(setValue);//Okay
+console.log(setValue);//Okay */
 
-// Defining an Setter/Getter in a Newly Created Object
+// Defining getters and setters in ES6 class
 
+class Person{
+    constructor(firstname,lastname){
+        this._firstname = firstname;
+        this._lastname = lastname;
+    }
+    
+    get firstname(){
+        return `This is my firstname ${this._firstname}`
+    }
+    
+    set firstname(name){
+        this._firstname = name;
+    }
+
+    get lastname(){
+        return `This is my lastname ${this._lastname}`
+    }
+    
+    set lastname(name){
+        this._lastname = name;
+    }
+
+}
+
+var newPerson = new Person("Akin","Tayo");
+console.log(newPerson._firstname + " & " +newPerson.firstname);
+console.log(newPerson._lastname + " & " +newPerson.lastname);
