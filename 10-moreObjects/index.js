@@ -122,3 +122,17 @@ newDoor.setParams(300,750)
     .doorStatus()
     .close()
     .doorStatus()
+
+//CALLBACKS
+function sumArray(array,callback){
+    var sum = 0;
+    for(var i = 0; i < array.length; i++){
+        callback(array[i])
+        sum += array[i];
+    }
+    return sum;
+};
+var myArray = [9,3,34,5,6,7,78,23,6,8,54];
+sumArray(myArray, function(x){
+    console.log(x)
+})
