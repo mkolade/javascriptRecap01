@@ -158,3 +158,19 @@ function doSomethingAsync(then){
 doSomethingAsync(myThen)
 console.log("Async is cool");
 //order =: I`m doing something => Async is cool => Done! */
+
+//Callbacks and `this`
+[1,2,3,4,5].forEach(function(num){
+    console.log(num * 2);
+});
+
+const myButton = document.getElementById("myButton");
+function getMessage(msg,elem){
+    this.msg = msg;
+    elem.addEventListener('click', (event) => this.handleClick(event))
+};
+getMessage.prototype.handleClick = function(event){
+    console.log(this.msg, event.type);
+};
+
+new getMessage("Hello",myButton);
