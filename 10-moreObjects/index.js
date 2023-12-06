@@ -93,7 +93,7 @@ var myFunc2 = myFunc.clone()
 .log()//10 : 10 */
 
 //more method chaining
-function Door(){
+/* function Door(){
     this.width = "";
     this.height = "";
     this.status = "";
@@ -121,10 +121,10 @@ newDoor.setParams(300,750)
     .open()
     .doorStatus()
     .close()
-    .doorStatus()
+    .doorStatus() */
 
 //CALLBACKS
-function sumArray(array,callback){
+/* function sumArray(array,callback){
     var sum = 0;
     for(var i = 0; i < array.length; i++){
         callback(array[i])
@@ -135,4 +135,26 @@ function sumArray(array,callback){
 var myArray = [9,3,34,5,6,7,78,23,6,8,54];
 sumArray(myArray, function(x){
     console.log(x)
-})
+}) */
+
+//synchronous and asynchronous
+/* //synchronous
+function doSomething(then){
+    console.log('I`m doing something');
+    then();
+};
+function myThen(){
+    console.log("Done!");
+};
+doSomething(myThen);
+console.log("Sync is cool");
+//order =: I`m doing something => Done! => Sync is cool
+
+//asynchronous
+function doSomethingAsync(then){
+    setTimeout(then,1000)
+    console.log('I`m doing something');
+};
+doSomethingAsync(myThen)
+console.log("Async is cool");
+//order =: I`m doing something => Async is cool => Done! */
