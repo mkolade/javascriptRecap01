@@ -56,7 +56,7 @@ sam = Object.setPrototypeOf(sam,second);
 console.log(sam.hi()); */
 
 //Method Chaining
-
+/* 
 function Func(x = 0, y = 0){
     this.x = x;
     this.y = y;
@@ -90,4 +90,35 @@ myFunc.add({x:10, y:10})
 var myFunc2 = myFunc.clone()
 .log()//40 : 40
 .mulByNum(1/4)
-.log()//10 : 10
+.log()//10 : 10 */
+
+//more method chaining
+function Door(){
+    this.width = "";
+    this.height = "";
+    this.status = "";
+};
+Door.prototype.open = function(){
+    this.status = "open";
+    return this;
+};
+Door.prototype.close = function(){
+    this.status = "closed";
+    return this;
+};
+Door.prototype.setParams = function(width, height){
+    this.width = width;
+    this.height = height;
+    return this;
+};
+Door.prototype.doorStatus = function(){
+        console.log('The ' + this.width + ' x ' + this.height + ' door is ' + this.status);
+        return this;
+};
+
+var newDoor = new Door();
+newDoor.setParams(300,750)
+    .open()
+    .doorStatus()
+    .close()
+    .doorStatus()
