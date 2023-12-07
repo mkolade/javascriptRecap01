@@ -231,3 +231,16 @@ for(var i = 0; i < 3; i++){
         console.log(j)
     }(i),1000);
 } */
+
+// Cookies Section -: test if cookies are enabled
+
+/* if(navigator.cookieEnabled == false){
+    alert("Cookie not enables");
+}else{
+    alert("cookie enabled");
+}; */
+
+//Using localStorage
+localStorage.setItem("name","Mr Moshood");
+console.log(localStorage.getItem("name"));//Mr Moshood
+
