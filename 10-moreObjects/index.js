@@ -197,7 +197,7 @@ new getDetails("Hello!",myButton); */
 
 //callbacks for error handling
 
-var valExpected = true;
+/* var valExpected = true;
 function onSuccess(){
     console.log("Success!! okay.");
 };
@@ -215,14 +215,19 @@ function dataCompare(data,success, failure){
 function compAsync(data,success,failure){
     setTimeout(()=>{dataCompare(data,success,failure)},1000);
 };
-compAsync(valExpected,onSuccess,onFailure);//Success!! okay.
+compAsync(valExpected,onSuccess,onFailure);//Success!! okay. */
 
 //Intervals and Timeouts
-function execSmtin(){
+/* function execSmtin(){
     console.log("I am a real nigga!!.");
 };
-var myInterval = window.setInterval(execSmtin,6000);
-window.setTimeout(() => {
+var myInterval = setInterval(execSmtin,6000);
+setTimeout(() => {
     clearInterval(myInterval);
 },18000);
-
+//using timeout in a for loop
+for(var i = 0; i < 3; i++){
+    setTimeout(function(j){
+        console.log(j)
+    }(i),1000);
+} */
