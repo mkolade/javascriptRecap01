@@ -241,6 +241,27 @@ for(var i = 0; i < 3; i++){
 }; */
 
 //Using localStorage
-localStorage.setItem("name","Mr Moshood");
+/* localStorage.setItem("name","Mr Moshood");
 console.log(localStorage.getItem("name"));//Mr Moshood
+localStorage.removeItem("name");
+console.log(localStorage.getItem("name"));//Null
+
+var someObj = {
+    name:"Arike",
+    occupation:"pre-order",
+    chant:"Arike pre-order",
+    id:"77"
+};
+localStorage.setItem("userDetails",JSON.stringify(someObj));
+console.log(JSON.parse(localStorage.getItem("userDetails")));//{name: 'Arike', occupation: 'pre-order', chant: 'Arike pre-order', id: '77'}
+
+//easier way
+localStorage.nameId = "Moshood Mohammed";
+localStorage.year = 2000;
+localStorage.userDetailId = JSON.stringify(someObj);
+delete localStorage.year;
+console.log(localStorage.nameId,JSON.parse(localStorage.userDetailId),localStorage.year);//Moshood Mohammed {name: 'Arike', occupation: 'pre-order', chant: 'Arike pre-order', id: '77'} undefined
+localStorage.clear(); */
+
+//sessionStorage
 
