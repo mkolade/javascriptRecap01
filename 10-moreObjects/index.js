@@ -261,7 +261,25 @@ localStorage.year = 2000;
 localStorage.userDetailId = JSON.stringify(someObj);
 delete localStorage.year;
 console.log(localStorage.nameId,JSON.parse(localStorage.userDetailId),localStorage.year);//Moshood Mohammed {name: 'Arike', occupation: 'pre-order', chant: 'Arike pre-order', id: '77'} undefined
-localStorage.clear(); */
+//localStorage.clear();
+
+console.log(localStorage.length)
 
 //sessionStorage
+sessionStorage.setItem("okay","Testing okay");
+console.log(sessionStorage.getItem("okay"),sessionStorage.length);
+sessionStorage.removeItem("okay") */
+
+var myButton = document.querySelector("#myButton");
+
+
+function changeBackground(elem){
+    var myInputs = document.querySelectorAll(".formInputs");
+    elem.addEventListener("click",function(){
+        myInputs.forEach((value) =>{
+            value.setAttribute("id","sucker");
+        })
+    });
+};
+changeBackground(myButton)
 
