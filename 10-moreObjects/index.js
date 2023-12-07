@@ -160,17 +160,37 @@ console.log("Async is cool");
 //order =: I`m doing something => Async is cool => Done! */
 
 //Callbacks and `this`
-[1,2,3,4,5].forEach(function(num){
-    console.log(num * 2);
-});
+/* var anArray = [1,2,3,4,5];
+function arrCompare(theArray){
+    function getArrayWithNorm(someArray){
+        var sum = 0;
+        someArray.forEach(function(num){
+            sum += (num * 2);
+        })
+        return sum;
+    };
+
+    function getArrayWithArrow(someArray){
+        var sum = 0;
+        someArray.forEach((num) => {
+            sum += num;
+        })
+        return sum;
+    };
+    var sum1 = getArrayWithNorm(theArray);
+    var sum2 = getArrayWithArrow(theArray);
+    if(sum1 == (sum2 * 2)){
+        return `This array is perfect. Total sum is == ${sum1 + sum2}`;
+    }
+}
 
 const myButton = document.getElementById("myButton");
-function getMessage(msg,elem){
-    this.msg = msg;
-    elem.addEventListener('click', (event) => this.handleClick(event))
-};
-getMessage.prototype.handleClick = function(event){
-    console.log(this.msg, event.type);
-};
 
-new getMessage("Hello",myButton);
+function getDetails(msg, elem){
+    this.msg = msg;
+    elem.addEventListener("click",(event) => {this.handleClick(event)})
+}
+getDetails.prototype.handleClick = function(event){
+    console.log(this.msg,arrCompare(anArray,"And event type is:", event.type))
+}
+new getDetails("Hello!",myButton); */
