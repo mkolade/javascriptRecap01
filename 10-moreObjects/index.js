@@ -194,3 +194,35 @@ getDetails.prototype.handleClick = function(event){
     console.log(this.msg,arrCompare(anArray,"And event type is:", event.type))
 }
 new getDetails("Hello!",myButton); */
+
+//callbacks for error handling
+
+var valExpected = true;
+function onSuccess(){
+    console.log("Success!! okay.");
+};
+
+function onFailure(){
+    console.log("Failure!! okay.");
+};
+function dataCompare(data,success, failure){
+    if(data == valExpected){
+        success();
+    }else{
+        failure();
+    };
+};
+function compAsync(data,success,failure){
+    setTimeout(()=>{dataCompare(data,success,failure)},1000);
+};
+compAsync(valExpected,onSuccess,onFailure);//Success!! okay.
+
+//Intervals and Timeouts
+function execSmtin(){
+    console.log("I am a real nigga!!.");
+};
+var myInterval = window.setInterval(execSmtin,6000);
+window.setTimeout(() => {
+    clearInterval(myInterval);
+},18000);
+
