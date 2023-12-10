@@ -38,6 +38,16 @@ body{
     font-weight: 700;
     border: 2px solid black;
 }
+
 #sucker{
-    background: yellow;
+    background: rgba(0, 0, 0, 0.759);
+    color: rgba(255, 255, 255, 0.77);
+}
+#sucker > .mainForm {
+    border:6px solid rgba(255, 255, 255, 0.77);
+}
+#sucker > .mainForm button{
+    border: 2px solid rgba(255, 255, 255, 0.77);
+    background: rgba(255, 0, 0, 0.326) !important;
+    color: rgba(255, 255, 255, 0.77);
 }

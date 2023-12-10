@@ -261,6 +261,7 @@ localStorage.year = 2000;
 localStorage.userDetailId = JSON.stringify(someObj);
 delete localStorage.year;
 console.log(localStorage.nameId,JSON.parse(localStorage.userDetailId),localStorage.year);//Moshood Mohammed {name: 'Arike', occupation: 'pre-order', chant: 'Arike pre-order', id: '77'} undefined
+//to clear local storage -;
 //localStorage.clear();
 
 console.log(localStorage.length)
@@ -274,12 +275,23 @@ var myButton = document.querySelector("#myButton");
 
 
 function changeBackground(elem){
-    var myInputs = document.querySelectorAll(".formInputs");
+    var mainDiv = document.querySelector(".mainDiv");
+    var myTruth = false;
     elem.addEventListener("click",function(){
-        myInputs.forEach((value) =>{
-            value.setAttribute("id","sucker");
-        })
-    });
+        if(myTruth == false){
+            mainDiv.setAttribute("id","sucker");
+            var myValue = mainDiv.getAttribute("id") + " Dark mode";
+            myTruth = true;
+        }else{
+            mainDiv.setAttribute("id","");
+            var myValue = mainDiv.getAttribute("id") +  "Light mode only ha ha!!";
+            myTruth = false;
+        }
+        if(myValue){
+            console.log(myValue);
+        }
+    })
+    
 };
-changeBackground(myButton)
+changeBackground(myButton);
 
