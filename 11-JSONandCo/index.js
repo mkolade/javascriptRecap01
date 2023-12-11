@@ -20,3 +20,16 @@ function changeBackground(elem){
     })  
 };
 changeBackground(myButton);
+
+//JSON
+
+//manipulating JSON
+
+var jsonString = '[{"name":"Lionel","number":10},{"name":"Andres","number":8}]';
+//old method
+/* var data = JSON.parse(jsonString,function reviver(key,value){
+    return key === "name" ? value.toUpperCase()  : value
+}); */
+//new method
+var data = JSON.parse(jsonString,(key,value) => key === "name" ? value.toUpperCase : value);
+//console.log(data);
