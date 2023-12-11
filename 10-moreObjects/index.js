@@ -290,8 +290,7 @@ function changeBackground(elem){
         if(myValue){
             console.log(myValue);
         }
-    })
-    
+    })  
 };
 changeBackground(myButton);
 
