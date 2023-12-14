@@ -122,3 +122,14 @@ changeBackground(myButton);
         return response.json();
     }); */
 
+
+//Enumerations
+    //defining using Object.freeze()
+    var theEnumObj = {
+        one:1,
+        two:2,
+        three:3
+    };
+    Object.freeze(theEnumObj);
+    theEnumObj.two = 77;
+    console.log(theEnumObj);//{one: 1, two: 77, three: 3}
