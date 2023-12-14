@@ -106,3 +106,19 @@ changeBackground(myButton);
         });
         //console.log(JSON.parse(recordInJson));//(4) [{…}, {…}, {…}, {…}]
         //console.log(JSON.parse('["recordInJson"]'));//['recordInJson']
+
+//AJAX => ("Asynchronous JavaScript and XML")
+    //Sending and Receiving JSON Data via POST
+    /* const myUserData = {
+        details:"Molar Hus"
+    };
+    const postUser = fetch('file:///C:/Users/moham/Desktop/mySpace/Projects-Ongoing/javascriptRecap01/11-(JSON)(AJAX)andCo/index.html?/api',{
+        method:"POST",
+        body:JSON.stringify(myUserData)
+    }).then((response) =>{
+        if(!response.ok){
+            throw new Error('Got non-2XX response from API server.')
+        }
+        return response.json();
+    }); */
+
