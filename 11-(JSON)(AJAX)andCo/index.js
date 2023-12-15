@@ -7,11 +7,11 @@ function changeBackground(elem){
     elem.addEventListener("click",function(){
         if(myTruth == false){
             mainDiv.setAttribute("id","sucker");
-            var myValue = mainDiv.getAttribute("id") + " Dark mode";
+            var myValue = mainDiv.getAttribute("id") + " Dark mode!";
             myTruth = true;
         }else{
-            mainDiv.setAttribute("id","");
-            var myValue = mainDiv.getAttribute("id") +  "Light mode only ha ha!!";
+            mainDiv.setAttribute("id","No id so");
+            var myValue = mainDiv.getAttribute("id") +  ", Light mode only ha ha!!";
             myTruth = false;
         }
         if(myValue){
@@ -166,7 +166,7 @@ changeBackground(myButton);
 
 //MAP
     //creating and manipulating a Map
-        const map = new Map([["theDate",new Date()],["ajibade",{name:"sam"}]]);
+        const map = new Map([["theDate",new Date()],["ajibade","name"]]);
         /* console.log(map.size);//2
         console.log(map.get("theDate"));//Fri Dec 15 2023 17:20:03 GMT+0100 (West Africa Standard Time)
         console.log(map.get("ajibade"));//{name: 'sam'}
@@ -175,3 +175,13 @@ changeBackground(myButton);
         console.log(map.size);//1
         map.clear();
         console.log(map.size);//0 */
+    //Iterating Maps
+        for([key,value] of map){
+            //console.log(key +" -: "+ value);
+        };
+        for (const value of map.values()){
+            for (const key of map.keys()){
+                //console.log(key +" -: "+ value);
+            };
+        };
+        
