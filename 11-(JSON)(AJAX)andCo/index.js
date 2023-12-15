@@ -1,3 +1,4 @@
+
 var myButton = document.querySelector("#myButton");
 
 
@@ -201,6 +202,11 @@ changeBackground(myButton);
     //Get and Set
         const someMap = new Map();
         someMap.set("My Name","Xbvasncvashnb");
-        console.log(someMap.size +"-:  "+ someMap.get("My Name"))
+        console.log(someMap.size +"-:  "+ someMap.get("My Name"));
 
 //TIMESTAMPS
+    var timeNow = (new Date().getMilliseconds());
+    var tNow = (performance.now());
+    console.log( timeNow + " vs " + tNow);
+    
+    
