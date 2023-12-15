@@ -109,27 +109,69 @@ changeBackground(myButton);
 
 //AJAX => ("Asynchronous JavaScript and XML")
     //Sending and Receiving JSON Data via POST
-    /* const myUserData = {
-        details:"Molar Hus"
-    };
-    const postUser = fetch('file:///C:/Users/moham/Desktop/mySpace/Projects-Ongoing/javascriptRecap01/11-(JSON)(AJAX)andCo/index.html?/api',{
-        method:"POST",
-        body:JSON.stringify(myUserData)
-    }).then((response) =>{
-        if(!response.ok){
-            throw new Error('Got non-2XX response from API server.')
-        }
-        return response.json();
-    }); */
+        /* const myUserData = {
+            details:"Molar Hus"
+        };
+        const postUser = fetch('file:///C:/Users/moham/Desktop/mySpace/Projects-Ongoing/javascriptRecap01/11-(JSON)(AJAX)andCo/index.html?/api',{
+            method:"POST",
+            body:JSON.stringify(myUserData)
+        }).then((response) =>{
+            if(!response.ok){
+                throw new Error('Got non-2XX response from API server.')
+            }
+            return response.json();
+        }); */
 
 
 //Enumerations
     //defining using Object.freeze()
-    var theEnumObj = {
-        one:1,
-        two:2,
-        three:3
-    };
-    Object.freeze(theEnumObj);
-    theEnumObj.two = 77;
-    console.log(theEnumObj);//{one: 1, two: 77, three: 3}
+        var theEnumObj = {
+            white:1,
+            black:2,
+            gray:3
+        };
+        Object.freeze(theEnumObj);
+        theEnumObj.black = 77;
+        //console.log(theEnumObj);//{white: 1, black: 77, gray: 3}
+        const number = theEnumObj.black;
+        if(number < 4){
+            //console.log(number)
+            var ce = theEnumObj;
+            
+            for(nameId in ce){
+                if(ce[nameId] === number){
+                    //console.log(nameId);//black
+                }
+            }
+        }else{
+            alert("Sorry your value wasn't in the required range")
+        }
+    // Implementing Enums Using Symbols
+        const akolade = Symbol();
+        const woods = Symbol();
+        const timber = Symbol();
+
+        function describe(symbol){
+            switch(symbol){
+                case akolade:
+                    return "Manager Mohammed Akolade";
+                case woods:
+                    return "Tiger Woods";
+
+                case timber:
+                    return "July Timber";
+            }
+        };
+        //console.log(describe(woods))//Tiger Woods
+
+//MAP
+    //creating and manipulating a Map
+        const map = new Map([["theDate",new Date()],["ajibade",{name:"sam"}]]);
+        /* console.log(map.size);//2
+        console.log(map.get("theDate"));//Fri Dec 15 2023 17:20:03 GMT+0100 (West Africa Standard Time)
+        console.log(map.get("ajibade"));//{name: 'sam'}
+        map.delete("ajibade");
+        console.log(map.has("ajibade"));//false
+        console.log(map.size);//1
+        map.clear();
+        console.log(map.size);//0 */
