@@ -184,4 +184,13 @@ changeBackground(myButton);
                 //console.log(key +" -: "+ value);
             };
         };
-        
+        //using forEach
+            map.forEach((value,key,myMap) =>{
+                //console.log(`The Key: ${key}, The Value: ${value}.`);
+            });
+    //Get and Set
+        const someMap = new Map();
+        someMap.set("My Name","Xbvasncvashnb");
+        console.log(someMap.size +"-:  "+ someMap.get("My Name"))
+
+//TIMESTAMPS
