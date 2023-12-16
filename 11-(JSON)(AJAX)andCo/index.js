@@ -228,10 +228,10 @@ changeBackground(myButton);
         var myNum = +"42";
         var anotherNum = +true;
         console.log(myNum , anotherNum);//42 1
-    //The unary negation operator (+)
-        var myNum = +"42";
-        var anotherNum = +true;
-        console.log(myNum , anotherNum);//42 1
+    //The unary negation operator (-)
+        var myNum = -"42";
+        var anotherNum = -true;
+        console.log(myNum , anotherNum);//-42 -1
     //void - returns undefined
         function myAss(){
             return void 127;;
