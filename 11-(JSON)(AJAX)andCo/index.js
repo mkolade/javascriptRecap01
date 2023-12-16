@@ -202,7 +202,7 @@ changeBackground(myButton);
     //Get and Set
         const someMap = new Map();
         someMap.set("My Name","Xbvasncvashnb");
-        console.log(someMap.size +"-:  "+ someMap.get("My Name"));
+        //console.log(someMap.size +"-:  "+ someMap.get("My Name"));
 
 //TIMESTAMPS
     var timeNow = (new Date().getTime());//current time
@@ -212,7 +212,7 @@ changeBackground(myButton);
     //console.log( timeNow + " vs " + tNow + " vs " + currentTime + " vs " + timeInSec);//1702736714534 vs 81.70000004768372 vs 1702736714534 vs 1702737124862
 
 //Unary Operators
-    //typeof
+    /* //typeof
         console.log(typeof someMap);//object
         console.log(typeof timeNow);//number
     //delete - doesn't work on variables and functions
@@ -242,4 +242,4 @@ changeBackground(myButton);
         console.log(!false)//true
         console.log(!true)//false
         console.log(!!!12)//false
-        console.log(!!12)//true
+        console.log(!!12)//true */
