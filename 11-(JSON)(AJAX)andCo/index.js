@@ -205,8 +205,10 @@ changeBackground(myButton);
         console.log(someMap.size +"-:  "+ someMap.get("My Name"));
 
 //TIMESTAMPS
-    var timeNow = (new Date().getMilliseconds());
-    var tNow = (performance.now());
-    console.log( timeNow + " vs " + tNow);
+    var timeNow = (new Date().getTime());//current time
+    var tNow = (performance.now());//time since browser loaded
+    var currentTime = Date.now();//current time
+    var timeInSec = (Math.ceil(new Date().getTime()))/ 1000;
+    console.log( timeNow + " vs " + tNow + " vs " + currentTime + " vs " + timeInSec);//1702736714534 vs 81.70000004768372 vs 1702736714534 vs 1702737124862
     
     
