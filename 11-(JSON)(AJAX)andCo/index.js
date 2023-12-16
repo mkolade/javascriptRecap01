@@ -238,3 +238,8 @@ changeBackground(myButton);
 
         }
         console.log(myAss());//undefined
+    // The logical NOT operator (!)
+        console.log(!false)//true
+        console.log(!true)//false
+        console.log(!!!12)//false
+        console.log(!!12)//true
