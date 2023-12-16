@@ -209,6 +209,32 @@ changeBackground(myButton);
     var tNow = (performance.now());//time since browser loaded
     var currentTime = Date.now();//current time
     var timeInSec = (Math.ceil(new Date().getTime()))/ 1000;
-    console.log( timeNow + " vs " + tNow + " vs " + currentTime + " vs " + timeInSec);//1702736714534 vs 81.70000004768372 vs 1702736714534 vs 1702737124862
-    
-    
+    //console.log( timeNow + " vs " + tNow + " vs " + currentTime + " vs " + timeInSec);//1702736714534 vs 81.70000004768372 vs 1702736714534 vs 1702737124862
+
+//Unary Operators
+    //typeof
+        console.log(typeof someMap);//object
+        console.log(typeof timeNow);//number
+    //delete - doesn't work on variables and functions
+        delete Math.PI;
+        console.log(Math.PI);//3.141592653589793
+        var foo = 38;
+        delete foo;
+        console.log(foo);//38
+        var food = {carbs:"Rice"};
+        delete food.carbs;
+        console.log(food);//{}
+    //The unary plus operator (+)
+        var myNum = +"42";
+        var anotherNum = +true;
+        console.log(myNum , anotherNum);//42 1
+    //The unary negation operator (+)
+        var myNum = +"42";
+        var anotherNum = +true;
+        console.log(myNum , anotherNum);//42 1
+    //void - returns undefined
+        function myAss(){
+            return void 127;;
+
+        }
+        console.log(myAss());//undefined
