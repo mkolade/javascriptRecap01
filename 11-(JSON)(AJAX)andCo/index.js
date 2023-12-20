@@ -11,13 +11,11 @@ function changeBackground(elem){
             mainDiv.setAttribute("id","sucker");
             var myValue = mainDiv.getAttribute("id") + " Dark mode!";
             var timeForClickOne = Math.ceil(performance.now()) / 1000;
-            console.log(timeForClickOne)
             myTruth = true;
         }else{
             mainDiv.setAttribute("id","No id so");
             var myValue = mainDiv.getAttribute("id") +  ", Light mode only ha ha!!";
             var timeForClickTwo = Math.ceil(performance.now()) / 1000;
-            console.log(timeForClickTwo)
             myTruth = false;
         }
         if(myValue){
