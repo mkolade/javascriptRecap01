@@ -258,8 +258,41 @@ changeBackground(myButton);
         
     }
 
-    const generator = logNums();
+    /* const generator = logNums();
     generator.next();//Starting count
     generator.next();//yielding 1
     generator.throw(new Error("Error!!"));
-    generator.next();//nothing is displayed
+    generator.next();//nothing is displayed */
+
+    //Sending Values to Generator
+        function* sendValue(){
+            var sum = 0, value;
+            while(true){
+                value = yield;
+                if(value === null){
+                    break;
+                };
+                sum += value;
+            }
+            return sum;
+        };
+
+        const theValues = sendValue();
+        theValues.next();// initial next() to create the next yield
+        theValues.next(100);
+        theValues.next(10);
+        theValues.next(1);
+        var myValue = theValues.next(null).value;
+        //console.log(myValue);//111
+    //Iteration
+        function* range(n){
+            for(let i = 0; i < n; i++){
+                yield `I yield ${i}`;
+            }
+        };
+
+        for(n of range(2)){
+            console.log(n)
+        }
+        let nums = [...range(3)];
+        //console.log(nums);// ['I yield 0', 'I yield 1', 'I yield 2']
