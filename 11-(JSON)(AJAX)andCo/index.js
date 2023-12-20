@@ -241,3 +241,25 @@ changeBackground(myButton);
         console.log(!true)//false
         console.log(!!!12)//false
         console.log(!!12)//true */
+
+//Generator Functions
+    function* logNums(){
+        try{
+            console.log("Starting count");
+            yield 1;
+            console.log("yielding 1");
+            yield 2;
+            console.log("yielding 2");
+            yield 3;
+            console.log("yielding 3");
+        }catch(err){
+            console.log(err.message);
+        }
+        
+    }
+
+    const generator = logNums();
+    generator.next();//Starting count
+    generator.next();//yielding 1
+    generator.throw(new Error("Error!!"));
+    generator.next();//nothing is displayed
