@@ -300,6 +300,6 @@ changeBackground(myButton);
 //Promises -: I am coming back to this. i hope i remember
 
 // Set P -:Creating a Set
-        let themArray = [1,2,4,5,67,7,8,8,9];
-        var firstSet = new Set(themArray);
-        console.log(firstSet);//Set(8) {1, 2, 4, 5, 67, 7, 8, 9}
+    let themArray = [1,2,4,5,67,7,8,8,9];
+    var firstSet = new Set(themArray);
+    console.log(firstSet);//Set(8) {1, 2, 4, 5, 67, 7, 8, 9}
