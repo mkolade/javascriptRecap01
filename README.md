@@ -3,4 +3,3 @@ This is my 3rd attempt at JavaScript. I hope i master it this time around. If yo
 All JavaScript will be in comments 
 To run the codes, just Uncomment whichever section you need.
 Easy Peasy.
-And that's it.
